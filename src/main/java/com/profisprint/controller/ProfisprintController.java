@@ -52,6 +52,8 @@ public class ProfisprintController {
         log.info("fetchTask -> " + request);
 
         String lastUsedVideos = taskService.findLastUsedVideos(request.getTaskId());
+
+
 //        List<String> videos = youtubeService.getVideosByChannelIdAndCount(request.getChannelId(), request.getCountOfVideo());
         List<String> videos = youtubeService.getVideosByChannelIdAndCountWithFilterByLastUsedVideo(request.getChannelId(), request.getCountOfVideo(), lastUsedVideos);
         List<AdvertiseDto> advertise = advertiseService.getAdvertisesForSimpleTask(request.getTaskId(), request.getCustomerId(), request.getCountOfAdvertise(), request.getCountOfAdvertiseMove());
