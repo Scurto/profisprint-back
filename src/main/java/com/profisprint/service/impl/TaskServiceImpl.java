@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -89,6 +90,17 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
+    public ArrayList<Task> findListByOrderTaskId(String taskId) {
+        ArrayList<Task> tasks = null;
+        try {
+            tasks = taskRepository.findByOrderTaskIdOrderByPkTaskIdDesc(taskId);
+        } catch (Exception ex) {
+            log.error(ex.getMessage());
+        }
+        return tasks;
+    }
+
+    @Override
     public ArrayList<Task> findByCustomerId(String customerId) {
         ArrayList<Task> tasks = null;
         try {
@@ -111,6 +123,17 @@ public class TaskServiceImpl implements TaskService {
             return task.getVideos();
         }
         return null;
+    }
+
+    @Override
+    public ArrayList<String> findLastUsedVideoList(String taskId) {
+        ArrayList<String> arrayList = null;
+        ArrayList<Task> listOfLastTasks = findListByOrderTaskId(taskId);
+        if (listOfLastTasks != null) {
+            arrayList = new ArrayList<>(listOfLastTasks.stream().map(task -> task.getVideos()).collect(Collectors.toList()));
+        }
+
+        return arrayList;
     }
 
     @Override

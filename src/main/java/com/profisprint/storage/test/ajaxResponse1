@@ -1,0 +1,26 @@
+Request URL: https://seo-fast.ru/ajax/ajax_task.php
+Request Method: POST
+
+:authority: seo-fast.ru
+:method: POST
+:path: /ajax/ajax_task.php
+:scheme: https
+accept: */*
+accept-encoding: gzip, deflate, br
+accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+content-length: 654
+content-type: application/x-www-form-urlencoded; charset=UTF-8
+cookie: PHPSESSID=3l5v60sgt6p8fls323dia11qe5; _ym_uid=1636399001736919284; _ym_d=1636399001; hostname_sf=seo-fast.ru; _ym_visarc_4246883123=e1906acab58b34a90c17f1a4589ba89a; _buzz_fpc_=feaf02bebbfe7071c1c07e768565ebc2; _ym_visarc_4246983123=6068f2ea23164b07611c6b805e5e9dca; _ym_visarc_42461083123=1dcc84c87e103319e323255d3b3c2a6c; _vid_t=jsxgWSd3uIZZrIkWuMoCuBfqVRgVgbqrLdJXUjDMDGr5V0DV6zrJLN5SsTZ4/WzY1Gw39gVY3utdDmvumcU974pPTA==; _ym_visarc_42461183123=3c9c8837f83d596a4d2b922ea889d8d9; _ym_visarc_42461283123=7cec376c5d0e23521bc05042fa3833d5; _ga=GA1.2.883346684.1636718451; _gid=GA1.2.1614223963.1636718452; _ym_visarc_42461383123=147493c0bbbe1a645987598c64b98bf8; _ym_visarc_42461483123=0d5f7ed877efcf75c2f65a5417432fc5; _ym_visarc_42461583123=7a2ae8b2040f207d4bdef4d6cbd12e3e; _ym_visarc_42461683123=961f06b63cab4d02b44fe11db97f4dfe; _ym_visarc_42461783123=855bddc757279350f0ebb35b9011fc4f; _ym_visarc_42461883123=18f835bc376f73224c96e744c8e8bc54; _ym_visarc_42461983123=c7686af9bb003ea48390a91a1520b84c; _ym_visarc_42462083123=62ac5c9f2e435bf33136e27f3600d813; menu_g1=0; _ym_visarc_42462183123=65923c2b541a9167c025899a9e2502f2; _ym_visarc_42462283123=d66426b9fe5428f6083e20fc4a7fcfb6; _ym_visarc_42462383123=1161804a567dde02c91990b533dd5726; _ym_visarc_42462483123=0c60c479c5bbf781940a8033ebf4289a; _ym_visarc_42462583123=76c4606eee731bd0e76296bbd0ac1e0b; _ym_visarc_42462683123=4212071a7a3a58807355c95ca53809a1; _ym_visarc_42462783123=92b794122ad9213b4353c1f339de4922; _ym_visarc_42462883123=c027cff4e53b0cb683d1d2d621c07eaf; taskfilter3=100; taskurl=; taskfilter4=100; id_us_t=; _ym_visarc_42462983123=22f596acedc5d2987286957054fb8ea1; id_task=; evercookie_cache=09255f52641471a340d1db7a29a3b006; evercookie_etag=09255f52641471a340d1db7a29a3b006; evercookie_png=09255f52641471a340d1db7a29a3b006; entrance=09255f52641471a340d1db7a29a3b006; window_popup_y=1; _ym_visarc_42463083123=302217cfd1ce4430a9bacfae59e75e15; mail_page=mail_sf_all; _ym_visarc_4246183123=d79038848a1e030077f6319dbd8012c8; window_popup3=1; _ym_visarc_4246283123=e9601795844d1f2d3489510f35ff2876; search_all_tt=; _ym_visarc_4246383123=3a1ffe7068a572974af1768c3b451981; taskfilter2=17; taskpricemax=0; taskpricemin=0; taskuser=; search_all_td=0; due_date=0; _ym_visarc_4246483123=856f575ad89bdf1d900d88e612c056b2; _ym_isad=1; taskfilter1=98; fingerprint=f3a236d53eee648883f5f3864d28c8b2; __gads=ID=65ee2bb6fefafe20:T=1636399001:S=ALNI_MbT5coZiM8tb4btBQ0stO4JFHNW4A
+origin: https://seo-fast.ru
+referer: https://seo-fast.ru/work_task?read&adv=732180
+sec-ch-ua: "Opera";v="81", " Not;A Brand";v="99", "Chromium";v="95"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+sec-fetch-dest: empty
+sec-fetch-mode: cors
+sec-fetch-site: same-origin
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.60 (Edition globalgames-sd)
+x-requested-with: XMLHttpRequest
+
+form_data ->
+sf=otvettask&otvet=drago+ustymenko%0A%0Ahttps%3A%2F%2Fluxberry.life%2Fua%2Fbudinki-zrostajut-znizhki-trivajut-v-zhk-luxberry-lakes-forest-vid-budcapital-ta-forum-capital%2F%3Futm_medium%3Dcpc%26utm_source%3Dgdn%26utm_content%3Dyoutube%26gclid%3DEAIaIQobChMIs__m1-TK9AIVh9KaCh0qTQKwEAEYASAAEgJL0PD_BwE%0A%0Ahttps%3A%2F%2Fbodyart.fitness%2Fru%2F%3Futm_phase%3D764233338%26utm_content%3Dyoutube%26gclid%3DEAIaIQobChMI6NGl6-TK9AIViJebCh1CtgcsEAEYASAAEgI-RvD_BwE%0A%0Ahttps%3A%2F%2Fwww.brocard.ua%2Fua%2Fpromotion%2F%3Futm_medium%3Dcpc%26utm_phase%3D309629161%26utm_content%3Dyoutube%26gclid%3DEAIaIQobChMIiNiv_uTK9AIVBeuaCh097Ay8EAEYASAAEgIhtvD_BwE&id=732180

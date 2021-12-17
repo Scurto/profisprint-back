@@ -1,6 +1,5 @@
 package com.profisprint.service;
 
-import com.profisprint.model.advertise.AdvertiseDto;
 import com.profisprint.model.domain.Task;
 import com.profisprint.model.simpleTask.DataTaskDto;
 import com.profisprint.model.simpleTask.TaskInfoModel;
@@ -18,9 +17,13 @@ public interface TaskService {
 
     Task findByOrderTaskId(String taskId);
 
+    ArrayList<Task> findListByOrderTaskId(String taskId);
+
     ArrayList<Task> findByCustomerId(String customerId);
 
     String findLastUsedVideos(String taskId);
+
+    ArrayList<String> findLastUsedVideoList(String taskId);
 
     List<Task> findAllTask();
 }

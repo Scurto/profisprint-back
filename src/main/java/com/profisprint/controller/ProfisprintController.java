@@ -1,25 +1,15 @@
 package com.profisprint.controller;
 
 import com.profisprint.model.advertise.AdvertiseDto;
-import com.profisprint.model.domain.Task;
-import com.profisprint.model.simpleTask.DataTaskDto;
-import com.profisprint.model.simpleTask.FetchSimpleTaskRequest;
-import com.profisprint.model.simpleTask.FetchSimpleTaskResponse;
-import com.profisprint.model.simpleTask.ProcessSimpleTaskRequest;
+import com.profisprint.model.simpleTask.*;
 import com.profisprint.model.youtube.YoutubeVideosResponse;
 import com.profisprint.service.*;
-import com.profisprint.storage.TaskDataInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
-
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @Slf4j
@@ -39,6 +29,8 @@ public class ProfisprintController {
     private SeoFastService seoFastService;
     @Autowired
     private ProfitcentrService profitcentrService;
+    @Autowired
+    private UtilTaskService utilTaskService;
 
     @RequestMapping(value = "/getDataByTaskId", method = RequestMethod.GET)
     public DataTaskDto getDataByTaskId(@RequestParam("taskId") String taskId) {
@@ -52,8 +44,16 @@ public class ProfisprintController {
         log.info("fetchTask -> " + request);
 
         String lastUsedVideos = taskService.findLastUsedVideos(request.getTaskId());
-        //        List<String> videos = youtubeService.getVideosByChannelIdAndCount(request.getChannelId(), request.getCountOfVideo());
-        List<String> videos = youtubeService.getVideosByChannelIdAndCountWithFilterByLastUsedVideo(request.getChannelId(), request.getCountOfVideo(), lastUsedVideos);
+        List<String> videos = null;
+
+        if (List.of("821519", "7531", "7624", "7619", "730443", "741947", "742764").contains(request.getTaskId())) {
+//            TODO only new video for customer
+            List<String> lastUsedVideoList = taskService.findLastUsedVideoList(request.getTaskId());
+            videos = youtubeService.getVideosByChannelIdAndCountWithFilterByLastUsedVideo(request.getTaskId(), request.getChannelId(), request.getCountOfVideo(), lastUsedVideoList);
+        } else {
+            videos = youtubeService.getVideosByChannelIdAndCountWithFilterByLastUsedVideo(request.getTaskId(), request.getChannelId(), request.getCountOfVideo(), lastUsedVideos);
+        }
+
         List<AdvertiseDto> advertise = advertiseService.getAdvertisesForSimpleTask(request.getTaskId(), request.getCustomerId(), request.getCountOfAdvertise(), request.getCountOfAdvertiseMove());
 
 
@@ -64,22 +64,10 @@ public class ProfisprintController {
         return task;
     }
 
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
-    public List<DataTaskDto> test() {
-        List<DataTaskDto> dto = TaskDataInfo.taskDataList();
-        List<Task> allTask = taskService.findAllTask();
-
-        LocalDate now = LocalDate.now();
-        LocalDate dayBeforeYesterday = LocalDate.now().minusDays(2);
-
-        List<Task> onHoldTasks = allTask.stream().filter(task -> dateToLocalDate(task.getCreatedDate()).isAfter(dayBeforeYesterday)).collect(Collectors.toList());
-        List<String> onHoldTaskIds = onHoldTasks.stream().map(task -> task.getOrderTaskId()).collect(Collectors.toList());
-        List<DataTaskDto> readyToStartTasks = dto.stream().filter(task -> !onHoldTaskIds.contains(task.getTaskId())).collect(Collectors.toList());
+    @RequestMapping(value = "/simpleTaskReady", method = RequestMethod.GET)
+    public List<SimpleTaskReadyDto> simpleTaskReady() {
+        List<SimpleTaskReadyDto> readyToStartTasks = utilTaskService.getSimpleTaskReady();
         return readyToStartTasks;
-    }
-
-    private LocalDate dateToLocalDate(Date date) {
-        return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
     }
 
     @RequestMapping(value = "/processTask", method = RequestMethod.POST)

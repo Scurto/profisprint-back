@@ -285,6 +285,272 @@ public class AdvertiseDataInfo {
                         new SecondaryAdvertiseModel("https://oborot.team/case/e-in", "")
                 ))
         );
+        advertises.put("synergy-bud.com.ua", model(
+                "https://synergy-bud.com.ua/akczii/",
+                "synergy-bud.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://synergy-bud.com.ua/news/", ""),
+                        new SecondaryAdvertiseModel("https://synergy-bud.com.ua/o-kompanii/", ""),
+                        new SecondaryAdvertiseModel("https://synergy-bud.com.ua/kak-kupit/", ""),
+                        new SecondaryAdvertiseModel("https://synergy-bud.com.ua/standart/", ""),
+                        new SecondaryAdvertiseModel("https://synergy-bud.com.ua/commerce/", ""),
+                        new SecondaryAdvertiseModel("https://synergy-bud.com.ua/contacts/", ""),
+                        new SecondaryAdvertiseModel("https://synergy-bud.com.ua/projects-kyiv/", "")
+                ))
+        );
+        advertises.put("krankomplekt.com", model(
+                "https://krankomplekt.com/gruzozahvat/greyfer/",
+                "krankomplekt.com",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://krankomplekt.com/mechanic/", ""),
+                        new SecondaryAdvertiseModel("https://krankomplekt.com/grcran/", ""),
+                        new SecondaryAdvertiseModel("https://krankomplekt.com/gruzozahvat/", ""),
+                        new SecondaryAdvertiseModel("https://krankomplekt.com/compcran/", ""),
+                        new SecondaryAdvertiseModel("https://krankomplekt.com/nestandartnoe/", ""),
+                        new SecondaryAdvertiseModel("https://krankomplekt.com/radio/", ""),
+                        new SecondaryAdvertiseModel("https://krankomplekt.com/uslugi/", "")
+                ))
+        );
+        advertises.put("evrodim.com", model(
+                "https://evrodim.com/akcii/",
+                "evrodim.com",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://evrodim.com/europe", ""),
+                        new SecondaryAdvertiseModel("https://evrodim.com/zelenyiy-bulvar", ""),
+                        new SecondaryAdvertiseModel("https://evrodim.com/kottedjnie-gorodki/", ""),
+                        new SecondaryAdvertiseModel("https://evrodim.com/technologii/", ""),
+                        new SecondaryAdvertiseModel("https://evrodim.com/news/", ""),
+                        new SecondaryAdvertiseModel("https://evrodim.com/trade-in/", ""),
+                        new SecondaryAdvertiseModel("https://evrodim.com/contacts", "")
+                ))
+        );
+        advertises.put("pine-grove.com.ua", model(
+                "https://pine-grove.com.ua/generalnij-plan",
+                "pine-grove.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://pine-grove.com.ua/o-gorodke", ""),
+                        new SecondaryAdvertiseModel("https://pine-grove.com.ua/uchastki", ""),
+                        new SecondaryAdvertiseModel("https://pine-grove.com.ua/karta-proezda", ""),
+                        new SecondaryAdvertiseModel("https://pine-grove.com.ua/gallery", ""),
+                        new SecondaryAdvertiseModel("https://pine-grove.com.ua/o-zastrojshike", ""),
+                        new SecondaryAdvertiseModel("https://pine-grove.com.ua/pravila", "")
+                ))
+        );
+        advertises.put("icefood.com.ua", model(
+                "https://icefood.com.ua/discount",
+                "icefood.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://icefood.com.ua/all", ""),
+                        new SecondaryAdvertiseModel("https://icefood.com.ua/soups", ""),
+                        new SecondaryAdvertiseModel("https://icefood.com.ua/second-courses", ""),
+                        new SecondaryAdvertiseModel("https://icefood.com.ua/breakfast", ""),
+                        new SecondaryAdvertiseModel("https://icefood.com.ua/desserts", ""),
+                        new SecondaryAdvertiseModel("https://icefood.com.ua/smoothies", ""),
+                        new SecondaryAdvertiseModel("https://icefood.com.ua/vegan", "")
+                ))
+        );
+        advertises.put("bosch-home.com.ua", model(
+                "https://www.bosch-home.com.ua/uk/specials/akcii",
+                "bosch-home.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://www.bosch-home.com.ua/uk/produkty", ""),
+                        new SecondaryAdvertiseModel("https://www.bosch-home.com.ua/uk/servis/pidtrymka", ""),
+                        new SecondaryAdvertiseModel("https://www.bosch-home.com.ua/uk/vidkryite-bosch", ""),
+                        new SecondaryAdvertiseModel("https://www.bosch-home.com.ua/uk/produkty/hotuvannya-ta-vypikannya", ""),
+                        new SecondaryAdvertiseModel("https://www.bosch-home.com.ua/uk/produkty/prannya-ta-sushinnya/sushylni-mashyny", ""),
+                        new SecondaryAdvertiseModel("https://www.bosch-home.com.ua/uk/produkty/posudomyini-mashyny", ""),
+                        new SecondaryAdvertiseModel("https://www.bosch-home.com.ua/uk/produkty/prasky", "")
+                ))
+        );
+        advertises.put("parklane.ua", model(
+                "https://parklane.ua/uk/realty-forsale",
+                "parklane.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://parklane.ua/uk/realty_search/apartment/sale", ""),
+                        new SecondaryAdvertiseModel("https://parklane.ua/uk/realty_search/house/sale", ""),
+                        new SecondaryAdvertiseModel("https://parklane.ua/uk/realty_search/nonlive/sale", ""),
+                        new SecondaryAdvertiseModel("https://parklane.ua/uk/realty_search/land/sale", ""),
+                        new SecondaryAdvertiseModel("https://parklane.ua/uk/realtystat", ""),
+                        new SecondaryAdvertiseModel("https://parklane.ua/uk/realtors/bestof", ""),
+                        new SecondaryAdvertiseModel("https://parklane.ua/uk/expert", "")
+                ))
+        );
+        advertises.put("stekloarmatura.com.ua", model(
+                "https://stekloarmatura.com.ua/produktsiya",
+                "stekloarmatura.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://stekloarmatura.com.ua/o-nas", ""),
+                        new SecondaryAdvertiseModel("https://stekloarmatura.com.ua/kharakteristiki", ""),
+                        new SecondaryAdvertiseModel("https://stekloarmatura.com.ua/preimushchestva", ""),
+                        new SecondaryAdvertiseModel("https://stekloarmatura.com.ua/stekloplastikovaya-armatura-tsena", ""),
+                        new SecondaryAdvertiseModel("https://stekloarmatura.com.ua/galereya", ""),
+                        new SecondaryAdvertiseModel("https://stekloarmatura.com.ua/kontakty", ""),
+                        new SecondaryAdvertiseModel("https://stekloarmatura.com.ua/primenenie", "")
+                ))
+        );
+        advertises.put("atlant.build", model(
+                "https://atlant.build/offer",
+                "atlant.build",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://atlant.build/kommertsiya", ""),
+                        new SecondaryAdvertiseModel("https://atlant.build/novosti", ""),
+                        new SecondaryAdvertiseModel("https://atlant.build/kontakty", ""),
+                        new SecondaryAdvertiseModel("https://atlant.build/o-kompanii/opisanie", ""),
+                        new SecondaryAdvertiseModel("https://atlant.build/o-kompanii/istoriya", ""),
+                        new SecondaryAdvertiseModel("https://atlant.build/o-kompanii/nagradyi", ""),
+                        new SecondaryAdvertiseModel("https://atlant.build/o-kompanii/otzyvy", "")
+                ))
+        );
+        advertises.put("advokatessa.com.ua", model(
+                "https://advokatessa.com.ua",
+                "advokatessa.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://advokatessa.com.ua/o-nas/", ""),
+                        new SecondaryAdvertiseModel("https://advokatessa.com.ua/uslugi/", ""),
+                        new SecondaryAdvertiseModel("https://advokatessa.com.ua/sertifikaty/", ""),
+                        new SecondaryAdvertiseModel("https://advokatessa.com.ua/blog/", ""),
+                        new SecondaryAdvertiseModel("https://advokatessa.com.ua/stoimost/", ""),
+                        new SecondaryAdvertiseModel("https://advokatessa.com.ua/kontakty/", ""),
+                        new SecondaryAdvertiseModel("https://advokatessa.com.ua/riski-pokupki-kvartiry-pri-pereustupk/", "")
+                ))
+        );
+        advertises.put("grusha.ua", model(
+                "https://grusha.ua",
+                "grusha.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://grusha.ua/catalog/zernovoy_kofe/", ""),
+                        new SecondaryAdvertiseModel("https://grusha.ua/catalog/molotyy_kofe/", ""),
+                        new SecondaryAdvertiseModel("https://grusha.ua/catalog/monosorta/", ""),
+                        new SecondaryAdvertiseModel("https://grusha.ua/catalog/rastvorimyy_kofe/", ""),
+                        new SecondaryAdvertiseModel("https://grusha.ua/catalog/chay/", ""),
+                        new SecondaryAdvertiseModel("https://grusha.ua/catalog/aksessuary/", ""),
+                        new SecondaryAdvertiseModel("https://grusha.ua/catalog/biozdorove/", "")
+                ))
+        );
+        advertises.put("suzuki.niko.ua", model(
+                "https://suzuki.niko.ua",
+                "suzuki.niko.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://suzuki.niko.ua/news/", ""),
+                        new SecondaryAdvertiseModel("https://suzuki.niko.ua/buying/accessories/", ""),
+                        new SecondaryAdvertiseModel("https://suzuki.niko.ua/buying/credit/", ""),
+                        new SecondaryAdvertiseModel("https://suzuki.niko.ua/buying/waranty/", ""),
+                        new SecondaryAdvertiseModel("https://suzuki.niko.ua/buying/grey/", ""),
+                        new SecondaryAdvertiseModel("https://suzuki.niko.ua/buying/trade-in/", ""),
+                        new SecondaryAdvertiseModel("https://suzuki.niko.ua/owners/of-service-centers/", "")
+                ))
+        );
+        advertises.put("ok-land.riel.ua", model(
+                "https://ok-land.riel.ua",
+                "ok-land.riel.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://ok-land.riel.ua/about", ""),
+                        new SecondaryAdvertiseModel("https://ok-land.riel.ua/flats", ""),
+                        new SecondaryAdvertiseModel("https://ok-land.riel.ua/komertsijna-neruhomist", ""),
+                        new SecondaryAdvertiseModel("https://ok-land.riel.ua/parking", ""),
+                        new SecondaryAdvertiseModel("https://ok-land.riel.ua/buyers", ""),
+                        new SecondaryAdvertiseModel("https://ok-land.riel.ua/visualization", ""),
+                        new SecondaryAdvertiseModel("https://ok-land.riel.ua/news", "")
+                ))
+        );
+        advertises.put("matrix7km.com", model(
+                "https://matrix7km.com/specials/",
+                "matrix7km.com",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://matrix7km.com/bytovaya-tekhnika/", ""),
+                        new SecondaryAdvertiseModel("https://matrix7km.com/dacha-sad-ogorod/", ""),
+                        new SecondaryAdvertiseModel("https://matrix7km.com/instrumenty-i-avtotovary/", ""),
+                        new SecondaryAdvertiseModel("https://matrix7km.com/kompyutery-i-noutbuki/", ""),
+                        new SecondaryAdvertiseModel("https://matrix7km.com/krasota-i-zdorove/", ""),
+                        new SecondaryAdvertiseModel("https://matrix7km.com/krasota-i-zdorove/odezhda-obuv-aksessuary/", ""),
+                        new SecondaryAdvertiseModel("https://matrix7km.com/ofis-shkola-knigi/", "")
+                ))
+        );
+        advertises.put("trofey.ua", model(
+                "https://trofey.ua",
+                "trofey.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://trofey.ua/udilishha", ""),
+                        new SecondaryAdvertiseModel("https://trofey.ua/katushki", ""),
+                        new SecondaryAdvertiseModel("https://trofey.ua/leski-shnury", ""),
+                        new SecondaryAdvertiseModel("https://trofey.ua/primanki", ""),
+                        new SecondaryAdvertiseModel("https://trofey.ua/poplavki-signalizatory", ""),
+                        new SecondaryAdvertiseModel("https://trofey.ua/krjuchki", ""),
+                        new SecondaryAdvertiseModel("https://trofey.ua/osnastki", "")
+                ))
+        );
+        advertises.put("pmstore.com", model(
+                "https://pmstore.com",
+                "pmstore.com",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://pmstore.com/compilation/novinki", ""),
+                        new SecondaryAdvertiseModel("https://pmstore.com/store/odezhda", ""),
+                        new SecondaryAdvertiseModel("https://pmstore.com/store/aksessuary", ""),
+                        new SecondaryAdvertiseModel("https://pmstore.com/store/razvlecheniya", ""),
+                        new SecondaryAdvertiseModel("https://pmstore.com/store/podarki", ""),
+                        new SecondaryAdvertiseModel("https://pmstore.com/compilation/mahatch", ""),
+                        new SecondaryAdvertiseModel("https://pmstore.com/compilation/sale", "")
+                ))
+        );
+        advertises.put("prime-technic.kiev.ua", model(
+                "https://prime-technic.kiev.ua",
+                "prime-technic.kiev.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://prime-technic.kiev.ua/alarm.html", ""),
+                        new SecondaryAdvertiseModel("https://prime-technic.kiev.ua/shumoizol.html", ""),
+                        new SecondaryAdvertiseModel("https://prime-technic.kiev.ua/okleyka-avto-plonkoy.html", ""),
+                        new SecondaryAdvertiseModel("https://prime-technic.kiev.ua/parctronic.html", ""),
+                        new SecondaryAdvertiseModel("https://prime-technic.kiev.ua/mediaandac.html", ""),
+                        new SecondaryAdvertiseModel("https://prime-technic.kiev.ua/light.html", ""),
+                        new SecondaryAdvertiseModel("https://prime-technic.kiev.ua/polirovka-avtomobilya.html", "")
+                ))
+        );
+        advertises.put("tmegroup.com.ua", model(
+                "https://tmegroup.com.ua",
+                "tmegroup.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://tmegroup.com.ua/g85785597-pivovarni-pod-klyuch", ""),
+                        new SecondaryAdvertiseModel("https://tmegroup.com.ua/g85464865-varochnye-poryadki", ""),
+                        new SecondaryAdvertiseModel("https://tmegroup.com.ua/g85463472-tskt", ""),
+                        new SecondaryAdvertiseModel("https://tmegroup.com.ua/g85462882-forfasy", ""),
+                        new SecondaryAdvertiseModel("https://tmegroup.com.ua/g85465085-sip-keg-mojki", ""),
+                        new SecondaryAdvertiseModel("https://tmegroup.com.ua/g85465083-drugoe-pivovarennoe-oborudovanie", ""),
+                        new SecondaryAdvertiseModel("https://tmegroup.com.ua/g100259864-baki-nagreva-vody", "")
+                ))
+        );
+        advertises.put("stihl.ua", model(
+                "https://www.stihl.ua/aktuelles.aspx",
+                "stihl.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://www.stihl.ua/produkte.aspx", ""),
+                        new SecondaryAdvertiseModel("https://www.stihl.ua/haendlersuche.aspx", ""),
+                        new SecondaryAdvertiseModel("https://www.stihl.ua/service.aspx", ""),
+                        new SecondaryAdvertiseModel("https://www.stihl.ua/praxiswissen.aspx", ""),
+                        new SecondaryAdvertiseModel("https://www.stihl.ua/unternehmen.aspx", ""),
+                        new SecondaryAdvertiseModel("https://www.stihl.ua/unterhaltung.aspx", ""),
+                        new SecondaryAdvertiseModel("https://www.stihl.ua/discover-stihl.aspx", "")
+                ))
+        );
+
 
 //        advertises.put("kobzov.ua", model(
 //                "http://kobzov.ua/shows/cirk-recordiv/",
@@ -304,12 +570,6 @@ public class AdvertiseDataInfo {
     }
 
 
-//    https://oborot.team/?gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2FWiVHiSk4jxzkfwMFvAbXpl4r1jn8GhdAawBEUJUB_E3PRn_kUqt4aAooMEALw_wcB
-//    https://synergy-bud.com.ua/projects/sinergiya-siti/room/2/?utm_source=google&utm_medium=cpc&utm_campaign=gdn-custom-intent-audiences-sinergiya-siti&utm_content&utm_term=www.youtube.com&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G2LsFPDFytx7XAUcvn3ZSgHPUd7uj7rA7d5NvxXfnyaWz5D-aEsdoaAoz5EALw_wcB
-//    https://krankomplekt.com/gruzozahvat/greyfer/?https:/krankomplekt.com/gruzozahvat/greyfer/&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2FqQup_OePAanOdmb6_ACuqo5uF-Td3ZxgBaxozrRGcEIKEKVm_DKEaAv23EALw_wcB
-//    https://evrodim.com/akcii/
-//    https://icefood.com.ua/discount
-//    https://pine-grove.com.ua/generalnij-plan?gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G6Y-gG9YTNhB9JHNgUBFZk9_3nabVqFUHy9Dc2W_BDmpgP52csxVEaAn10EALw_wcB
     private static AdvertiseModel model(String mainUrl, String id, String location, List<SecondaryAdvertiseModel> list) {
         return new AdvertiseModel(mainUrl, id, location, "www." + id, list);
     }

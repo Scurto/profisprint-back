@@ -60,6 +60,17 @@ public class TaskDataInfo {
                     "40",
                     "profitcentr"
             ),
+            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=547462*/
+                    "547462",
+                    "UCkFNKjZcJ9lqlR0iGfdekgw",
+                    "gamersh",
+                    "3",
+                    "3",
+                    "3",
+                    "40",
+                    "40",
+                    "profitcentr"
+            ),
             new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=728651*/
                     "728651",
                     "UC7QysxMhyjN7_Bo7IepPIEA",
@@ -104,6 +115,39 @@ public class TaskDataInfo {
                     "40",
                     "seo-fast"
             ),
+            new DataTaskDto( /*https://seo-fast.ru/work_task?read&adv=554876*/
+                    "554876",
+                    "UCkFNKjZcJ9lqlR0iGfdekgw",
+                    "gamersh",
+                    "2",
+                    "2",
+                    "2",
+                    "40",
+                    "40",
+                    "seo-fast"
+            ),
+            new DataTaskDto( /*https://seo-fast.ru/work_task?read&adv=682870*/
+                    "682870",
+                    "UC4wip9_U3OUnxRio7oUB2bQ",
+                    "gamersh",
+                    "3",
+                    "2",
+                    "2",
+                    "40",
+                    "40",
+                    "seo-fast"
+            ),
+            new DataTaskDto( /*https://seo-fast.ru/work_task?read&adv=572215*/
+                    "572215",
+                    "UC4I8ObTn0IkIhRdTBflObJg",
+                    "gamersh",
+                    "3",
+                    "2",
+                    "2",
+                    "40",
+                    "40",
+                    "seo-fast"
+            ),
             new DataTaskDto( /*https://seo-fast.ru/work_task?read&adv=732180*/
                     "732180",
                     "UCxAEHSQ0BObkBpW_yh-EtzQ",
@@ -137,6 +181,39 @@ public class TaskDataInfo {
                     "40",
                     "seo-fast"
             ),
+                new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=824301*/
+                        "824301",
+                        "UC1r1Rsn-fhYXE0DLB9Kgiog",
+                        "lorddracula",
+                        "3",
+                        "3",
+                        "0",
+                        "40",
+                        "40",
+                        "profitcentr"
+                ),
+                new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=817063*/
+                        "817063",
+                        "UCxAEHSQ0BObkBpW_yh-EtzQ",
+                        "lorddracula",
+                        "3",
+                        "3",
+                        "0",
+                        "40",
+                        "40",
+                        "profitcentr"
+                ),
+                new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=824297*/
+                        "824297",
+                        "UCNtj6yVuYDmsNtiJlPBMKQQ",
+                        "lorddracula",
+                        "3",
+                        "3",
+                        "0",
+                        "40",
+                        "40",
+                        "profitcentr"
+                ),
             new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=857360*/
                     "857360",
                     "UC0WFXYm3-Ewj3EoNB6Rfa3Q",
@@ -282,6 +359,17 @@ public class TaskDataInfo {
             ),
             new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=859530*/
                     "859530",
+                    "UCdILTxzi-L4ctzwRfuUu21w",
+                    "olegwt",
+                    "2",
+                    "2",
+                    "1",
+                    "40",
+                    "40",
+                    "profitcentr"
+            ),
+            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=866309*/
+                    "866309",
                     "UCdILTxzi-L4ctzwRfuUu21w",
                     "olegwt",
                     "2",
@@ -445,17 +533,17 @@ public class TaskDataInfo {
                     "30",
                     "profitcentr"
             ),
-            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=841900*/
-                    "841900",
-                    "UC1Y5o60CMIkP9eRxmrOpOyg",
-                    "vadya_crystal",
-                    "2",
-                    "1",
-                    "2",
-                    "40",
-                    "40",
-                    "profitcentr"
-            ),
+//            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=841900*/
+//                    "841900",
+//                    "UC1Y5o60CMIkP9eRxmrOpOyg",
+//                    "vadya_crystal",
+//                    "2",
+//                    "1",
+//                    "2",
+//                    "40",
+//                    "40",
+//                    "profitcentr"
+//            ),
             new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=797522*/
                     "797522",
                     "UCLMJbwWCVx3TmEnIFN3U3ag",
@@ -467,17 +555,17 @@ public class TaskDataInfo {
                     "40",
                     "profitcentr"
             ),
-            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=719244*/
-                    "719244",
-                    "UCkIlKN6cLoAat_OU9cr8R8Q",
-                    "skat10",
-                    "5",
-                    "1",
-                    "3",
-                    "40",
-                    "40",
-                    "profitcentr"
-            ),
+//            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=719244*/
+//                    "719244",
+//                    "UCkIlKN6cLoAat_OU9cr8R8Q",
+//                    "skat10",
+//                    "5",
+//                    "1",
+//                    "3",
+//                    "40",
+//                    "40",
+//                    "profitcentr"
+//            ),
             new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=845819*/
                     "845819",
                     "UCYgjtqeJLYAglEf9uLh3BrA",
@@ -489,17 +577,17 @@ public class TaskDataInfo {
                     "40",
                     "profitcentr"
             ),
-                new DataTaskDto( /*https://seouniversal.ru/work-task-read?adv=7706*/
-                        "7706",
-                        "UCYgjtqeJLYAglEf9uLh3BrA",
-                        "mpu",
-                        "2",
-                        "1",
-                        "2",
-                        "40",
-                        "40",
-                        "seouniversal"
-                ),
+            new DataTaskDto( /*https://seouniversal.ru/work-task-read?adv=7706*/
+                    "7706",
+                    "UCYgjtqeJLYAglEf9uLh3BrA",
+                    "mpu",
+                    "2",
+                    "1",
+                    "2",
+                    "40",
+                    "40",
+                    "seouniversal"
+            ),
             new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=760507*/
                     "760507",
                     "UCFxmQ4o17SGRevIrQ2Vd7TQ",
@@ -522,17 +610,28 @@ public class TaskDataInfo {
                     "40",
                     "profitcentr"
             ),
-            new DataTaskDto( /*https://seo-fast.ru/work_task?read&adv=755841*/
-                    "755841",
-                    "UCfaliVna1UQ71ZBGyrsXIzQ",
-                    "kidskingdom",
-                    "3",
+            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=859767*/
+                    "859767",
+                    "UCx3yr00RH7XBDYDtAEN5i7Q",
+                    "siam123",
+                    "2",
                     "1",
                     "2",
                     "40",
                     "40",
-                    "seo-fast"
+                    "profitcentr"
             ),
+//            new DataTaskDto( /*https://seo-fast.ru/work_task?read&adv=755841*/
+//                    "755841",
+//                    "UCfaliVna1UQ71ZBGyrsXIzQ",
+//                    "kidskingdom",
+//                    "3",
+//                    "1",
+//                    "2",
+//                    "40",
+//                    "40",
+//                    "seo-fast"
+//            ),
             new DataTaskDto( /*https://seo-fast.ru/work_task?read&adv=635949*/
                     "635949",
                     "UCRSnosIC2KL5keKI8HJMh0Q",
@@ -588,17 +687,17 @@ public class TaskDataInfo {
                     "40",
                     "socpublic"
             ),
-            new DataTaskDto( /*https://socpublic.com/account/task_view.html?id=1209653*/
-                    "1209653",
-                    "UCPjk2IX9fDUr9JdjrA1D9Dw",
-                    "daddyw",
-                    "1",
-                    "0",
-                    "0",
-                    "300",
-                    "0",
-                    "socpublic"
-            ),
+//            new DataTaskDto( /*https://socpublic.com/account/task_view.html?id=1209653*/
+//                    "1209653",
+//                    "UCPjk2IX9fDUr9JdjrA1D9Dw",
+//                    "daddyw",
+//                    "1",
+//                    "0",
+//                    "0",
+//                    "300",
+//                    "0",
+//                    "socpublic"
+//            ),
             new DataTaskDto( /*https://socpublic.com/account/task_view.html?id=1208503*/
                     "1208503",
                     "UCATI99-azwej8Yhyh54W2aA",
@@ -609,6 +708,127 @@ public class TaskDataInfo {
                     "120",
                     "0",
                     "socpublic"
+            ),
+            new DataTaskDto( /*http://socpublic.com/account/task_view.html?id=1208455*/
+                    "1208455",
+                    "UCOT4hdLYj_XV4VLEeD14SZA",
+                    "kreg25",
+                    "3",
+                    "0",
+                    "0",
+                    "120",
+                    "0",
+                    "socpublic"
+            ),
+            new DataTaskDto( /*http://socpublic.com/account/task_view.html?id=1211079*/
+                    "1211079",
+                    "UCaGIslXDa4fkIBsX87OWNbA",
+                    "kreg25",
+                    "3",
+                    "0",
+                    "0",
+                    "120",
+                    "0",
+                    "socpublic"
+            ),
+            new DataTaskDto( /*http://socpublic.com/account/task_view.html?id=1211030*/
+                    "1211030",
+                    "UCynOE39KA4WWUyMmxJxSZRw",
+                    "kreg25",
+                    "3",
+                    "0",
+                    "0",
+                    "120",
+                    "0",
+                    "socpublic"
+            ),
+            new DataTaskDto( /*https://seouniversal.ru/work-task-read?adv=7531*/
+                    "7531",
+                    "UC8z5jS19yDUUoWvaBYDDPZw",
+                    "ciber",
+                    "2",
+                    "1",
+                    "1",
+                    "40",
+                    "40",
+                    "seouniversal"
+            ),
+            new DataTaskDto( /*https://seouniversal.ru/work-task-read?adv=7619*/
+                    "7619",
+                    "UC8a_c95Y5WlTyS6Y_psLtaQ",
+                    "ciber",
+                    "2",
+                    "1",
+                    "1",
+                    "40",
+                    "40",
+                    "seouniversal"
+            ),
+            new DataTaskDto( /*http://socpublic.com/account/task_view.html?id=790848*/
+                    "790848",
+                    "UC1r1Rsn-fhYXE0DLB9Kgiog",
+                    "Cuzin",
+                    "3",
+                    "3",
+                    "0",
+                    "40",
+                    "40",
+                    "socpublic"
+            ),
+            new DataTaskDto( /*https://seouniversal.ru/work-task-read?adv=5848*/
+                    "5848",
+                    "UCFxmQ4o17SGRevIrQ2Vd7TQ",
+                    "mpu",
+                    "2",
+                    "1",
+                    "2",
+                    "40",
+                    "40",
+                    "seouniversal"
+            ),
+            new DataTaskDto( /*https://seouniversal.ru/work-task-read?adv=7624*/
+                    "7624",
+                    "UC0PbxfbpDHtJWZBALPXshgg",
+                    "ciber",
+                    "2",
+                    "1",
+                    "2",
+                    "40",
+                    "40",
+                    "seouniversal"
+            ),
+            new DataTaskDto( /*https://seouniversal.ru/work-task-read?adv=7684*/
+                    "7684",
+                    "UCwiPiCLosZusO7j0oy6sJDw",
+                    "mix",
+                    "3",
+                    "3",
+                    "2",
+                    "40",
+                    "40",
+                    "seouniversal"
+            ),
+            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=854201*/
+                    "854201",
+                    "UCdese8F_ympYIQO7FzaeL4g",
+                    "gifted",
+                    "2",
+                    "1",
+                    "2",
+                    "120",
+                    "40",
+                    "profitcentr"
+            ),
+            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=762269*/
+                    "762269",
+                    "UCmb8hoGdNP8GqwDfpYV0W-A",
+                    "single5235",
+                    "2",
+                    "1",
+                    "2",
+                    "40",
+                    "40",
+                    "profitcentr"
             )
         );
 
