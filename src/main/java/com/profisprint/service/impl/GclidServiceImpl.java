@@ -20,7 +20,7 @@ public class GclidServiceImpl implements GclidService {
     public String getGclid() {
         String query = "";
 
-        while (!query.contains("gclid=") && !query.contains("gclid-")) {
+        while (query == null || !query.contains("gclid=") && !query.contains("gclid-")) {
             String redirectUrl = getRedirectUrl();
             query = getQuery(redirectUrl);
         }
@@ -39,15 +39,15 @@ public class GclidServiceImpl implements GclidService {
             if (new Random().nextBoolean()) {
                 switch (field) {
                     case "utm_source=": {
-                        String value = List.of("gdn", "GDN", "google", "Google", "youtube", "awo").stream().findAny().get();
+                        String value = Arrays.asList("gdn", "GDN", "google", "Google", "youtube", "awo").stream().findAny().get();
                         gclidFields.append(field).append(value).append("&");
                     } break;
                     case "utm_medium=": {
-                        String value = List.of("cpc", "cpm", "trueview", "banner", "display").stream().findAny().get();
+                        String value = Arrays.asList("cpc", "cpm", "trueview", "banner", "display").stream().findAny().get();
                         gclidFields.append(field).append(value).append("&");
                     } break;
                     case "utm_content=": {
-                        String value = List.of("youtube", "google").stream().findAny().get();
+                        String value = Arrays.asList("youtube", "google").stream().findAny().get();
                         gclidFields.append(field).append(value).append("&");
                     } break;
                     case "utm_phase=": {

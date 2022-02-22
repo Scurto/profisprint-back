@@ -1,9 +1,9 @@
-package com.profisprint.model.simpleTask;
+package com.profisprint.model.screenTask;
 
 import lombok.Data;
 
 @Data
-public class SimpleTaskReadyDto {
+public class ScreenTaskReadyDto {
 
     private String taskId;
     private String channelId;

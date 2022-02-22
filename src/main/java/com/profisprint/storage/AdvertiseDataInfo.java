@@ -550,6 +550,51 @@ public class AdvertiseDataInfo {
                         new SecondaryAdvertiseModel("https://www.stihl.ua/discover-stihl.aspx", "")
                 ))
         );
+        advertises.put("narvis.ua", model(
+                "https://narvis.ua",
+                "narvis.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://narvis.ua/o-nas-2/", ""),
+                        new SecondaryAdvertiseModel("https://narvis.ua/vakansii-voditelja-mezhdunarodnika-2/", ""),
+                        new SecondaryAdvertiseModel("https://narvis.ua/trudoustrojstvo-2/", ""),
+                        new SecondaryAdvertiseModel("https://narvis.ua/oformlenie-dokumentov-2/", ""),
+                        new SecondaryAdvertiseModel("https://narvis.ua/stazhirovka-2/", ""),
+                        new SecondaryAdvertiseModel("https://narvis.ua/poleznaya-informatsiya-2/", ""),
+                        new SecondaryAdvertiseModel("https://narvis.ua/kontakty-2/", "")
+                ))
+        );
+        advertises.put("tsatsa.com.ua", model(
+                "https://tsatsa.com.ua/g13198551-rasprodazha",
+                "tsatsa.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://tsatsa.com.ua/g12797849-yuvelirnaya-bizhuteriya-xuping", ""),
+                        new SecondaryAdvertiseModel("https://tsatsa.com.ua/g12838928-yuvelirnaya-bizhuteriya-firmy", ""),
+                        new SecondaryAdvertiseModel("https://tsatsa.com.ua/g96605349-bizhuteriya-stainless-steel", ""),
+                        new SecondaryAdvertiseModel("https://tsatsa.com.ua/g101020677-tsepi-braslety-firmy", ""),
+                        new SecondaryAdvertiseModel("https://tsatsa.com.ua/g101339086-stal", ""),
+                        new SecondaryAdvertiseModel("https://tsatsa.com.ua/g94046670-busy-naturalnogo-zhemchuga", ""),
+                        new SecondaryAdvertiseModel("https://tsatsa.com.ua/g23104333-bizhuteriya-firmy-neoglory", "")
+                ))
+        );
+        advertises.put("mtservice.kiev.ua", model(
+                "https://mtservice.kiev.ua/prochistka-kanalizacii/otkachka-vygrebnyh-yam/",
+                "mtservice.kiev.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://mtservice.kiev.ua/vodoprovod/", ""),
+                        new SecondaryAdvertiseModel("https://mtservice.kiev.ua/otoplenie/", ""),
+                        new SecondaryAdvertiseModel("https://mtservice.kiev.ua/kanalizaciya/", ""),
+                        new SecondaryAdvertiseModel("https://mtservice.kiev.ua/obsluzhivanie-inzhenernyh-setej/montazh-naruzhnyh-setej/", ""),
+                        new SecondaryAdvertiseModel("https://mtservice.kiev.ua/santehnika/", ""),
+                        new SecondaryAdvertiseModel("https://mtservice.kiev.ua/montazh-teplogo-vodyanogo-pola/", ""),
+                        new SecondaryAdvertiseModel("https://mtservice.kiev.ua/otoplenie/montazh-kotelnyh-i-oborudovaniya/", "")
+                ))
+        );
+
+
+//        http://finstaff.com.ua
 
 
 //        advertises.put("kobzov.ua", model(

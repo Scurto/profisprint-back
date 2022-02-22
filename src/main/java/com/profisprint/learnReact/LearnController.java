@@ -1,5 +1,6 @@
-package com.learnReact;
+package com.profisprint.learnReact;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -64,7 +65,7 @@ public class LearnController {
     @RequestMapping(value = "/profile/status", method = RequestMethod.PUT)
     public String setProfileStatus(@RequestBody LearnReactProfileStatusModel statusModel) {
         setStatus(statusModel.getStatus());
-        return "{\"data\":{},\"messages\":[],\"fieldsErrors\":[],\"resultCode\":0}";
+        return "{\"data\":{},\"status\":\""+getStatus()+"\",\"messages\":[],\"fieldsErrors\":[],\"resultCode\":0}";
     }
 
     public String getStatus() {

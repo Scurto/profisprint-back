@@ -7,12 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ResultObjectDto {
-    private String type;
+public class FixedScreenUrlDto {
     private String title;
-    private String time;
-    private String icon;
     private String text;
-    private String url;
-    private String id;
+    private String icon;
 }

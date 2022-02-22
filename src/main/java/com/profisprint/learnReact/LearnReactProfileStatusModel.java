@@ -1,4 +1,4 @@
-package com.learnReact;
+package com.profisprint.learnReact;
 
 public class LearnReactProfileStatusModel {
 
@@ -10,5 +10,12 @@ public class LearnReactProfileStatusModel {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "LearnReactProfileStatusModel{" +
+                "status='" + status + '\'' +
+                '}';
     }
 }

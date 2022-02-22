@@ -1,4 +1,4 @@
-package com.learnReact;
+package com.profisprint.learnReact;
 
 public class LearnReactLoginModel {
 

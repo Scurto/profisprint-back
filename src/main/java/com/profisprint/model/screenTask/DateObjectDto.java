@@ -7,12 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ResultObjectDto {
-    private String type;
-    private String title;
+public class DateObjectDto {
     private String time;
-    private String icon;
-    private String text;
-    private String url;
-    private String id;
+    private String date;
 }

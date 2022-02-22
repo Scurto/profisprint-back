@@ -1,6 +1,7 @@
 package com.profisprint.controller;
 
 import com.profisprint.model.advertise.AdvertiseDto;
+import com.profisprint.model.seofast.TestModel;
 import com.profisprint.model.simpleTask.*;
 import com.profisprint.model.youtube.YoutubeVideosResponse;
 import com.profisprint.service.*;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @Slf4j
@@ -67,7 +69,10 @@ public class ProfisprintController {
     @RequestMapping(value = "/simpleTaskReady", method = RequestMethod.GET)
     public List<SimpleTaskReadyDto> simpleTaskReady() {
         List<SimpleTaskReadyDto> readyToStartTasks = utilTaskService.getSimpleTaskReady();
-        return readyToStartTasks;
+        return readyToStartTasks
+                .stream()
+                .filter(task -> !task.getTaskId().equalsIgnoreCase("0") && !task.getTaskId().equalsIgnoreCase("1") && !task.getTaskId().equalsIgnoreCase("2"))
+                .collect(Collectors.toList());
     }
 
     @RequestMapping(value = "/processTask", method = RequestMethod.POST)
@@ -82,11 +87,15 @@ public class ProfisprintController {
         return gclidService.getGclid();
     }
 
-    @RequestMapping(value = "/seofast", method = RequestMethod.GET)
-    public String seofast() {
+    @RequestMapping(value = "/seofast", method = RequestMethod.POST)
+    public String seofast(@RequestParam("username") String username, @RequestParam("password") String password) {
 //        http://localhost:8830/seofast
-        seoFastService.test();
-        return "";
+        log.info("username -> " + username);
+        log.info("password -> " + password);
+
+        return "some value";
+//        seoFastService.test();
+//        return "";
     }
     @RequestMapping(value = "/profitcentr", method = RequestMethod.GET)
     public String profitcentr() {

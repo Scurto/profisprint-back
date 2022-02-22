@@ -104,7 +104,7 @@ public class YoutubeServiceImpl implements YoutubeService {
         if (lastUsedVideos != null) {
             for (String lastUsedVideo : lastUsedVideos) {
                 List<String> forRemove = List.of(lastUsedVideo.split("/"));
-                allVideoList.removeAll(forRemove);
+                allVideoList = allVideoList.stream().filter(e -> !forRemove.contains(e.getVideoId())).collect(Collectors.toList());
             }
         }
         System.out.println("after = " + allVideoList.size());
@@ -150,6 +150,14 @@ public class YoutubeServiceImpl implements YoutubeService {
 
     @Override
     public List<YoutubeVideoObject> getVideosObjectAlternativeByChannelId(String taskId, String channelId) {
+        List<String> specialHardcodedVideos = List.of("");
+        if (specialHardcodedVideos.contains(taskId)) {
+            return specialHardcodedObjectVideos(taskId);
+        }
+        if (channelId.contains("list=")) {
+            return getVideosObjectAlternativeFromChannelList(channelId);
+        }
+
 
         StringBuilder builder = new StringBuilder("https://www.youtube.com/channel/").append(channelId).append("/videos");
         String url = builder.toString();
@@ -191,6 +199,47 @@ public class YoutubeServiceImpl implements YoutubeService {
             }
             break;
         }
+
+        return videosList;
+    }
+
+    public List<YoutubeVideoObject> getVideosObjectAlternativeFromChannelList(String channelId) {
+        StringBuilder builder = new StringBuilder("https://www.youtube.com/playlist?").append(channelId);
+        String url = builder.toString();
+        List<YoutubeVideoObject> videosList = new ArrayList<>();
+
+        HttpEntity<Void> requestEntity = new HttpEntity<>(new HttpHeaders());
+        ResponseEntity<String> exchange = restTemplate.exchange(url, HttpMethod.GET, requestEntity, String.class);
+
+        String a = exchange.getBody().substring(exchange.getBody().indexOf("var ytInitialData = {") +20, exchange.getBody().length());
+        String b = a.substring(0, a.indexOf(";</script>"));
+
+        try {
+            YoutubeVideosAlternativeResponse response = new ObjectMapper().readValue(b, YoutubeVideosAlternativeResponse.class);
+            ArrayList<HashMap<String, HashMap<String, ArrayList>>> list = (ArrayList<HashMap<String, HashMap<String, ArrayList>>>) response.getContents().getTwoColumnBrowseResultsRenderer().getTabs().get(0).getTabRenderer().getContent().get("sectionListRenderer").get("contents");
+            HashMap<String, HashMap<String, ArrayList<HashMap<String, Object>>>> map = (HashMap<String, HashMap<String, ArrayList<HashMap<String, Object>>>>) list.get(0).get("itemSectionRenderer").get("contents").get(0);
+            ArrayList<HashMap<String, Object>> hashMaps = map.get("playlistVideoListRenderer").get("contents");
+            for (HashMap<String, Object> hashMap : hashMaps) {
+                HashMap<String, Object> videoRenderer = (HashMap<String, Object>) hashMap.get("playlistVideoRenderer");
+                HashMap<String, HashMap<String, ArrayList<HashMap<String, Object>>>> videoRenderer2 = (HashMap<String, HashMap<String, ArrayList<HashMap<String, Object>>>>) hashMap.get("playlistVideoRenderer");
+                if (videoRenderer != null) {
+                    String videoId = (String)videoRenderer.get("videoId");
+                    String text = (String)videoRenderer2.get("title").get("runs").get(0).get("text");
+                    videosList.add(new YoutubeVideoObject(videoId, text));
+                }
+            }
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+
+        return videosList;
+    }
+
+    private List<YoutubeVideoObject> specialHardcodedObjectVideos(String taskId) {
+        List<YoutubeVideoObject> videosList = new ArrayList<>();
+//        switch (taskId) {
+//            break;
+//        }
 
         return videosList;
     }
