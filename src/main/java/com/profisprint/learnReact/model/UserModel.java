@@ -14,6 +14,7 @@ public class UserModel {
     private Photo photos;
     private String status;
     private boolean followed;
+    private ProfileModel profile;
 
     public String getName() {
         return name;
@@ -69,6 +70,14 @@ public class UserModel {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public ProfileModel getProfile() {
+        return profile;
+    }
+
+    public void setProfile(ProfileModel profile) {
+        this.profile = profile;
     }
 }
 

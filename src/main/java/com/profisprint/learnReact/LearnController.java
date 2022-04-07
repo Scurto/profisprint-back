@@ -1,10 +1,8 @@
 package com.profisprint.learnReact;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.profisprint.learnReact.model.*;
 import com.profisprint.learnReact.repository.UserModelRepository;
-import com.profisprint.learnReact.service.PhotoService;
 import org.bson.BsonBinarySubType;
 import org.bson.types.Binary;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,14 +20,10 @@ import java.util.Random;
 @RequestMapping(value = "api/1.0")
 public class LearnController {
 
-    private String status = "defaultStatus";
     private boolean logged = false;
 
     @Autowired
     UserModelRepository modelRepository;
-
-    @Autowired
-    PhotoService photoService;
 
     @GetMapping(value = "/users")
     private UserItemsModel getUsers(@RequestParam Integer page, @RequestParam Integer count) throws JsonProcessingException {
@@ -83,23 +77,47 @@ public class LearnController {
     }
 
     @RequestMapping(value = "/profile/{userId}", method = RequestMethod.GET)
-    public String getProfile(final @PathVariable String userId) throws Exception {
+    public ProfileModel getProfile(final @PathVariable String userId) throws Exception {
         System.out.println("getProfile = " + userId);
         Optional<UserModel> userModel = modelRepository.findById(Long.valueOf(userId));
         UserModel model = userModel.orElseThrow(() -> new Exception("User not found"));
-        return "{\"aboutMe\":null,\"contacts\":{\"facebook\":null,\"website\":null,\"vk\":null,\"twitter\":null,\"instagram\":null,\"youtube\":null,\"github\":null,\"mainLink\":null},\"lookingForAJob\":false,\"lookingForAJobDescription\":null,\"fullName\":\"test12345678\",\"userId\":13976,\"photos\":{\"small\":\"small\",\"large\":\"" + model.getPhotos().getLarge() +"\"}}";
+        if (model.getProfile() == null) {
+            ProfileModel profileModel = new ProfileModel();
+            profileModel.setUserId(model.getId());
+            profileModel.setFullName(model.getName());
+            Photo photo = new Photo();
+            photo.setSmall("https://i.stack.imgur.com/nbSKY.png");
+            photo.setLarge("https://i.stack.imgur.com/nbSKY.png");
+            profileModel.setPhotos(photo);
+            model.setProfile(profileModel);
+            modelRepository.save(model);
+        }
+        return model.getProfile();
     }
 
     @RequestMapping(value = "/profile/status/{userId}", method = RequestMethod.GET)
-    public String getProfileStatus(final @PathVariable String userId) {
+    public String getProfileStatus(final @PathVariable String userId) throws Exception {
         System.out.println("getProfileStatus = " + userId);
+        Optional<UserModel> userModel = modelRepository.findById(Long.valueOf(userId));
+        UserModel model = userModel.orElseThrow(() -> new Exception("User not found"));
+
+        if (model.getStatus() != null) {
+            return model.getStatus();
+        }
         return getStatus();
     }
 
     @RequestMapping(value = "/profile/status", method = RequestMethod.PUT)
-    public String setProfileStatus(@RequestBody LearnReactProfileStatusModel statusModel) {
-        setStatus(statusModel.getStatus());
-        return "{\"data\":{},\"status\":\""+getStatus()+"\",\"messages\":[],\"fieldsErrors\":[],\"resultCode\":0}";
+    public String setProfileStatus(@RequestBody LearnReactProfileStatusModel statusModel) throws Exception {
+        Optional<UserModel> userModel = modelRepository.findById(Long.valueOf(statusModel.getUserId()));
+        UserModel model = userModel.orElseThrow(() -> new Exception("User not found"));
+        if (statusModel.getStatus() != null && statusModel.getStatus().equalsIgnoreCase(model.getStatus())) {
+            return "{\"data\":{},\"status\":\""+statusModel.getStatus()+"\",\"messages\":[],\"fieldsErrors\":[],\"resultCode\":0}";
+        }
+        model.setStatus(statusModel.getStatus());
+        modelRepository.save(model);
+
+        return "{\"data\":{},\"status\":\""+statusModel.getStatus()+"\",\"messages\":[],\"fieldsErrors\":[],\"resultCode\":0}";
     }
 
     @RequestMapping(value = "/profile/photo", method = RequestMethod.PUT)
@@ -109,8 +127,10 @@ public class LearnController {
         UserModel model = userModel.orElseThrow(() -> new Exception("User not found"));
         Photo photo = new Photo();
         String baseUrl = "http://localhost:8830/api/1.0/profile/photo/";
-        photo.setLarge(baseUrl + model.getId() + "?v=" + new Random().nextInt(100 - 1));
-        photo.setSmall(baseUrl + model.getId() + "?v=" + new Random().nextInt(100 - 1));
+
+        int v = new Random().nextInt(100 - 1);
+        photo.setLarge(baseUrl + model.getId() + "?v=" + v);
+        photo.setSmall(baseUrl + model.getId() + "?v=" + v);
         photo.setTitle(file.getName());
         photo.setImage(new Binary(BsonBinarySubType.BINARY, file.getBytes()));
         model.setPhotos(photo);
@@ -131,11 +151,7 @@ public class LearnController {
     }
 
     public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
+        return "defaultStatus";
     }
 
     public boolean isLogged() {
