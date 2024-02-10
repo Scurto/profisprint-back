@@ -2,7 +2,6 @@ package com.profisprint.service.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.profisprint.model.youtube.alternative.GridRender;
 import com.profisprint.model.youtube.alternative.YoutubeVideoObject;
 import com.profisprint.model.youtube.alternative.YoutubeVideosAlternativeResponse;
 import com.profisprint.model.youtube.YoutubeVideosResponse;
@@ -131,13 +130,10 @@ public class YoutubeServiceImpl implements YoutubeService {
 
         try {
             YoutubeVideosAlternativeResponse response = new ObjectMapper().readValue(b, YoutubeVideosAlternativeResponse.class);
-            ArrayList<HashMap<String, HashMap<String, ArrayList>>> list = (ArrayList<HashMap<String, HashMap<String, ArrayList>>>) response.getContents().getTwoColumnBrowseResultsRenderer().getTabs().get(1).getTabRenderer().getContent().get("sectionListRenderer").get("contents");
-            HashMap<String, HashMap<String, ArrayList<HashMap<String, Object>>>> map = (HashMap<String, HashMap<String, ArrayList<HashMap<String, Object>>>>) list.get(0).get("itemSectionRenderer").get("contents").get(0);
-            ArrayList<HashMap<String, Object>> hashMaps = map.get("gridRenderer").get("items");
-            for (HashMap<String, Object> hashMap : hashMaps) {
-                HashMap<String, Object> videoRenderer = (HashMap<String, Object>) hashMap.get("gridVideoRenderer");
-                if (videoRenderer != null) {
-                    String videoId = (String)videoRenderer.get("videoId");
+            ArrayList<HashMap<String, HashMap<String, HashMap<String, HashMap>>>> list = (ArrayList<HashMap<String, HashMap<String, HashMap<String, HashMap>>>>) response.getContents().getTwoColumnBrowseResultsRenderer().getTabs().get(1).getTabRenderer().getContent().get("richGridRenderer").get("contents");
+            for (HashMap<String, HashMap<String, HashMap<String, HashMap>>> map : list) {
+                if (map.get("richItemRenderer") != null) {
+                    String videoId = (String)map.get("richItemRenderer").get("content").get("videoRenderer").get("videoId");
                     videosList.add(videoId);
                 }
             }

@@ -71,9 +71,9 @@ public class TaskDataInfo {
                     "40",
                     "profitcentr"
             ),
-            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=728651*/
-                    "728651",
-                    "UC7QysxMhyjN7_Bo7IepPIEA",
+            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=756267*/
+                    "756267",
+                    "UCycgfC-1XTtOeMLr5Vz77dg",
                     "gamersh",
                     "3",
                     "3",
@@ -82,6 +82,18 @@ public class TaskDataInfo {
                     "40",
                     "profitcentr"
             ),
+            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=728651*/
+                    "728651",
+                    "UCazMACdpHmK8-pVDUyV2dmQ",
+                    "gamersh",
+                    "3",
+                    "3",
+                    "3",
+                    "40",
+                    "40",
+                    "profitcentr"
+            ),
+//                document.getElementsByClassName('ytp-ce-channel-title ytp-ce-link');
             new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=729950*/
                     "729950",
                     "UCfAbkNKEJ-UwgCdKpJnv94w",
@@ -91,7 +103,9 @@ public class TaskDataInfo {
                     "3",
                     "40",
                     "40",
-                    "profitcentr"
+                    "profitcentr",
+                    "Если вы из России, меняйте IP, а для других стран используйте только родной!\n" + "\n" + "Перед выполнением чистим куки! (ctrl+shift+delete)\n" + "\n" + "1) В поиске Ютуб вбиваем: nikatmg\n" + "\n" + "2) Находим канал : NikaTMG (https://prnt.sc/17mjyfq)\n" + "\n" + "3) Смотрим 3-4 свежих видео ( 30-40 сек)\n" + "\n" + "4) Кликаем по рекламе на 3 последнее загруженное видео (gclid) , ждем полной загрузки и делаете 2-3 перехода не меньше 30 сек каждый! (имитируем активность)\n" + "\n" + "Рекламы должны быть разные!\n" + "\n" + "Длительность проверяю!\n" + "\n" + "Спасибо Вам за качественное выполнение;)\n" + "\n" + "Посмотреть все задания автора\n" + "https://profitcentr.com/work-task?id_rekl=gamersh",
+                    "1) Ссылки на 3-4 видео\n" + "2) Ссылки на 3 разных рекламный сайт + переходы\n" + "\n" + "Или делаете скриншот истории браузера\n" + "\n" + "Меняйте IP, только если вы из России!!!"
             ),
             new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=512678*/
                     "512678",
@@ -104,9 +118,20 @@ public class TaskDataInfo {
                     "40",
                     "profitcentr"
             ),
-                new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=757011*/
-                        "757011",
-                        "UCcCOG9rXUw_PVsec4Lx4tlw",
+            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=757011*/
+                    "757011",
+                    "UCn876cgOYNQmoBxpcysf2FQ",
+                    "gamersh",
+                    "3",
+                    "3",
+                    "3",
+                    "40",
+                    "40",
+                    "profitcentr"
+            ),
+                new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=864136*/
+                        "864136",
+                        "UCtW4GeIBW_ZWgM3d3vFeWow",
                         "gamersh",
                         "3",
                         "3",
@@ -115,17 +140,17 @@ public class TaskDataInfo {
                         "40",
                         "profitcentr"
                 ),
-                new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=849133*/
-                        "849133",
-                        "UCPACGKdhpOOkpFIGy4mUBEA",
-                        "gamersh",
-                        "3",
-                        "3",
-                        "3",
-                        "40",
-                        "40",
-                        "profitcentr"
-                ),
+            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=849133*/
+                    "849133",
+                    "UCPACGKdhpOOkpFIGy4mUBEA",
+                    "gamersh",
+                    "3",
+                    "3",
+                    "3",
+                    "40",
+                    "40",
+                    "profitcentr"
+            ),
             new DataTaskDto( /*https://seo-fast.ru/work_task?read&adv=446161*/
                     "446161",
                     "UCfAbkNKEJ-UwgCdKpJnv94w",
@@ -271,7 +296,29 @@ public class TaskDataInfo {
             ),
             new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=812650*/
                     "812650",
-                    "UCDc98TeeN_Xbwzxv0gL6oLQ",
+                    "UCNFoqYcLdHo_c4SZLsIB_AQ",
+                    "orfen",
+                    "1",
+                    "1",
+                    "2",
+                    "120",
+                    "40",
+                    "profitcentr"
+            ),
+            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=1063808*/
+                    "1063808",
+                    "UCW9F3hX1ZJOohz55bDpIKBg",
+                    "orfen",
+                    "1",
+                    "1",
+                    "2",
+                    "120",
+                    "40",
+                    "profitcentr"
+            ),
+            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=888361*/
+                    "888361",
+                    "UCIGE5eVgv9jL4DG5Enexs9A",
                     "orfen",
                     "2",
                     "1",
@@ -284,10 +331,10 @@ public class TaskDataInfo {
                     "708490",
                     "UCiCnifYLOJ_x-XvxluPuhzg",
                     "orfen",
-                    "2",
+                    "1",
                     "1",
                     "2",
-                    "40",
+                    "120",
                     "40",
                     "profitcentr"
             ),
@@ -302,9 +349,20 @@ public class TaskDataInfo {
                     "40",
                     "profitcentr"
             ),
+            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=962748*/
+                    "962748",
+                    "UCqE9JfJFnmGWjF2NKZ-J5zA",
+                    "drivepack007",
+                    "1",
+                    "1",
+                    "2",
+                    "120",
+                    "40",
+                    "profitcentr"
+            ),
             new DataTaskDto( /*https://seo-fast.ru/work_task?read&adv=737872*/
                     "737872",
-                    "UCqE9JfJFnmGWjF2NKZ-J5zA",
+                    "UC9elSKdN5009qsapo_18PbA",
                     "orfen",
                     "2",
                     "1",
@@ -478,6 +536,17 @@ public class TaskDataInfo {
                     "40",
                     "profitcentr"
             ),
+                new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=906167*/
+                        "906167",
+                        "UC1nBjIK9hBX84uvtz1tbpVg",
+                        "ruslankrasavchi",
+                        "3",
+                        "1",
+                        "3",
+                        "50",
+                        "50",
+                        "profitcentr"
+                ),
             new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=852967*/
                     "852967",
                     "UCqv19OBYtU-vcWmUpA1MgUg",
@@ -533,12 +602,12 @@ public class TaskDataInfo {
                     "40",
                     "profitcentr"
             ),
-            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=791788*/
-                    "791788",
+            new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=1039766*/
+                    "1039766",
                     "UCotMc-nkinKVKEn-8knD_6A",
                     "tamerlan2018",
                     "2",
-                    "1",
+                    "2",
                     "1",
                     "40",
                     "40",
@@ -918,6 +987,17 @@ public class TaskDataInfo {
                     "40",
                     "profitcentr"
             ),
+                new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=1061942*/
+                        "1061942",
+                        "UCJF3z847ffalmO4fw-wqw0g",
+                        "shilov145",
+                        "2",
+                        "1",
+                        "1",
+                        "40",
+                        "40",
+                        "profitcentr"
+                ),
                 new DataTaskDto( /*https://profitcentr.com/work-task-read?adv=615778*/
                         "615778",
                         "UCmmfBIY1uW-6Y-gwmRfqs_Q",

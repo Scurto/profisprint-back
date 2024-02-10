@@ -43,20 +43,20 @@ public class AdvertiseScreenDataInfo {
                         new SecondaryAdvertiseModel("https://oborot.team/case/e-in", "Кейс E-in")
                 ))
         );
-        advertises.put("novbud.com.ua", model(
-                "https://novbud.com.ua/",
-                "novbud.com.ua",
-                "Петровский квартал -",
-                "novbud.com.ua",
-                "UA",
-                List.of(
-                        new SecondaryAdvertiseModel("https://novbud.com.ua/контакты/", "Контакты - Петровский квартал"),
-                        new SecondaryAdvertiseModel("https://novbud.com.ua/новости-2/", "Новости - Петровский квартал"),
-                        new SecondaryAdvertiseModel("https://novbud.com.ua/как-купить/", "Как купить - Петровский квартал"),
-                        new SecondaryAdvertiseModel("https://novbud.com.ua/о-застройщике/", "О застройщике - Петровский квартал"),
-                        new SecondaryAdvertiseModel("https://novbud.com.ua/квартиры/", "Квартиры - Петровский квартал")
-                ))
-        );
+//        advertises.put("novbud.com.ua", model(
+//                "https://novbud.com.ua/",
+//                "novbud.com.ua",
+//                "Петровский квартал -",
+//                "novbud.com.ua",
+//                "UA",
+//                List.of(
+//                        new SecondaryAdvertiseModel("https://novbud.com.ua/контакты/", "Контакты - Петровский квартал"),
+//                        new SecondaryAdvertiseModel("https://novbud.com.ua/новости-2/", "Новости - Петровский квартал"),
+//                        new SecondaryAdvertiseModel("https://novbud.com.ua/как-купить/", "Как купить - Петровский квартал"),
+//                        new SecondaryAdvertiseModel("https://novbud.com.ua/о-застройщике/", "О застройщике - Петровский квартал"),
+//                        new SecondaryAdvertiseModel("https://novbud.com.ua/квартиры/", "Квартиры - Петровский квартал")
+//                ))
+//        );
         advertises.put("superhotel.kiev.ua", model(
                 "http://superhotel.kiev.ua",
                 "superhotel.kiev.ua",

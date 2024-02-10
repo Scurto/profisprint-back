@@ -282,19 +282,34 @@ public class TaskScreenDataInfo {
                             new FixedScreenUrlDto("www.youtube.com", "DSU - YouTube", "youtube")
                     )
             ),
+            new DataScreenTaskDto(
+                    "2646106",
+                    "UCDc98TeeN_Xbwzxv0gL6oLQ",
+                    "orfen",
+                    "3",
+                    "0",
+                    "0",
+                    "80",
+                    "0",
+                    "seosprint",
+                    List.of(
+                            new FixedScreenUrlDto("vk.com", "DotA 2", "vk"),
+                            new FixedScreenUrlDto("www.youtube.com", "DotA 2 - YouTube", "youtube")
+                    )
+            ),
                 new DataScreenTaskDto(
-                        "2646106",
-                        "UCDc98TeeN_Xbwzxv0gL6oLQ",
-                        "orfen",
+                        "751446",
+                        "UCwCCkv-d2QxKrFzahjU9Fjw",
+                        "shutnik",
                         "3",
-                        "0",
-                        "0",
-                        "80",
-                        "0",
-                        "seosprint",
+                        "3",
+                        "2",
+                        "70",
+                        "40",
+                        "seo-fast",
                         List.of(
-                                new FixedScreenUrlDto("vk.com", "DotA 2", "vk"),
-                                new FixedScreenUrlDto("www.youtube.com", "DotA 2 - YouTube", "youtube")
+                                new FixedScreenUrlDto("vk.com", "Александр Герасимов", "vk"),
+                                new FixedScreenUrlDto("www.youtube.com", "NaturalisT Александр Герасимов - YouTube", "youtube")
                         )
                 )
         );
