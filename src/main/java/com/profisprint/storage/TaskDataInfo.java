@@ -151,6 +151,39 @@ public class TaskDataInfo {
                     "40",
                     "profitcentr"
             ),
+            new DataTaskDto( /*https://aviso.bz/work-task-read?adv=330350*/
+                    "330350",
+                    "UCgx3-mX_9x1hvYzjA0JLxBg",
+                    "askar786",
+                    "3",
+                    "3",
+                    "3",
+                    "40",
+                    "40",
+                    "aviso"
+            ),
+            new DataTaskDto( /*https://aviso.bz/work-task-read?adv=602573*/
+                    "602573",
+                    "UCgx3-mX_9x1hvYzjA0JLxBg",
+                    "askar786",
+                    "3",
+                    "3",
+                    "3",
+                    "40",
+                    "40",
+                    "aviso"
+            ),
+                new DataTaskDto( /*https://aviso.bz/work-task-read?adv=326113*/
+                        "326113",
+                        "UCgx3-mX_9x1hvYzjA0JLxBg",
+                        "askar786",
+                        "3",
+                        "3",
+                        "3",
+                        "40",
+                        "40",
+                        "aviso"
+                ),
             new DataTaskDto( /*https://seo-fast.ru/work_task?read&adv=446161*/
                     "446161",
                     "UCfAbkNKEJ-UwgCdKpJnv94w",
@@ -365,6 +398,28 @@ public class TaskDataInfo {
                     "UC9elSKdN5009qsapo_18PbA",
                     "orfen",
                     "2",
+                    "1",
+                    "2",
+                    "40",
+                    "40",
+                    "seo-fast"
+            ),
+            new DataTaskDto( /*https://seo-fast.ru/work_task?read&adv=855564*/
+                    "855564",
+                    "UCiCnifYLOJ_x-XvxluPuhzg",
+                    "orfen",
+                    "1",
+                    "1",
+                    "2",
+                    "40",
+                    "40",
+                    "seo-fast"
+            ),
+            new DataTaskDto( /*https://seo-fast.ru/work_task?read&adv=878590*/
+                    "878590",
+                    "UCNFoqYcLdHo_c4SZLsIB_AQ",
+                    "orfen",
+                    "1",
                     "1",
                     "2",
                     "40",

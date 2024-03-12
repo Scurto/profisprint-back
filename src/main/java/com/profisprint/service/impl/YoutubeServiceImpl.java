@@ -36,6 +36,7 @@ public class YoutubeServiceImpl implements YoutubeService {
 //        ----- get channelId by video id
 //        https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=oFkg4Hwj1S4&key=AIzaSyAyNojjjjdQtfeIajqOXU6n4iQBysBS2kU
 //        ------------------------------------
+//        https://youtube.googleapis.com/youtube/v3/subscriptions?part=snippet&channelId=UCr-Jo1ckws9L7Cswes-1SBg&key=AIzaSyAyNojjjjdQtfeIajqOXU6n4iQBysBS2kU&maxResults=50
 
     @Override
     public List<String> getVideosByChannelId(String channelId) {
@@ -165,19 +166,31 @@ public class YoutubeServiceImpl implements YoutubeService {
         String a = exchange.getBody().substring(exchange.getBody().indexOf("var ytInitialData = {") +20, exchange.getBody().length());
         String b = a.substring(0, a.indexOf(";</script>"));
 
+//        try {
+//            YoutubeVideosAlternativeResponse response = new ObjectMapper().readValue(b, YoutubeVideosAlternativeResponse.class);
+//            ArrayList<HashMap<String, HashMap<String, ArrayList>>> list = (ArrayList<HashMap<String, HashMap<String, ArrayList>>>) response.getContents().getTwoColumnBrowseResultsRenderer().getTabs().get(1).getTabRenderer().getContent().get("sectionListRenderer").get("contents");
+//            HashMap<String, HashMap<String, ArrayList<HashMap<String, Object>>>> map = (HashMap<String, HashMap<String, ArrayList<HashMap<String, Object>>>>) list.get(0).get("itemSectionRenderer").get("contents").get(0);
+//            ArrayList<HashMap<String, Object>> hashMaps = map.get("gridRenderer").get("items");
+//            for (HashMap<String, Object> hashMap : hashMaps) {
+//                HashMap<String, Object> videoRenderer = (HashMap<String, Object>) hashMap.get("gridVideoRenderer");
+////                HashMap<String, HashMap<String, Object>> videoRenderer2 = (HashMap<String, HashMap<String, Object>>) hashMap.get("gridVideoRenderer");
+//                HashMap<String, HashMap<String, ArrayList<HashMap<String, Object>>>> videoRenderer2 = (HashMap<String, HashMap<String, ArrayList<HashMap<String, Object>>>>) hashMap.get("gridVideoRenderer");
+//                if (videoRenderer != null) {
+//                    String videoId = (String)videoRenderer.get("videoId");
+//                    String text = (String)videoRenderer2.get("title").get("runs").get(0).get("text");
+//                    videosList.add(new YoutubeVideoObject(videoId, text));
+//                }
+//            }
+//        } catch (JsonProcessingException e) {
+//            e.printStackTrace();
+//        }
         try {
             YoutubeVideosAlternativeResponse response = new ObjectMapper().readValue(b, YoutubeVideosAlternativeResponse.class);
-            ArrayList<HashMap<String, HashMap<String, ArrayList>>> list = (ArrayList<HashMap<String, HashMap<String, ArrayList>>>) response.getContents().getTwoColumnBrowseResultsRenderer().getTabs().get(1).getTabRenderer().getContent().get("sectionListRenderer").get("contents");
-            HashMap<String, HashMap<String, ArrayList<HashMap<String, Object>>>> map = (HashMap<String, HashMap<String, ArrayList<HashMap<String, Object>>>>) list.get(0).get("itemSectionRenderer").get("contents").get(0);
-            ArrayList<HashMap<String, Object>> hashMaps = map.get("gridRenderer").get("items");
-            for (HashMap<String, Object> hashMap : hashMaps) {
-                HashMap<String, Object> videoRenderer = (HashMap<String, Object>) hashMap.get("gridVideoRenderer");
-//                HashMap<String, HashMap<String, Object>> videoRenderer2 = (HashMap<String, HashMap<String, Object>>) hashMap.get("gridVideoRenderer");
-                HashMap<String, HashMap<String, ArrayList<HashMap<String, Object>>>> videoRenderer2 = (HashMap<String, HashMap<String, ArrayList<HashMap<String, Object>>>>) hashMap.get("gridVideoRenderer");
-                if (videoRenderer != null) {
-                    String videoId = (String)videoRenderer.get("videoId");
-                    String text = (String)videoRenderer2.get("title").get("runs").get(0).get("text");
-                    videosList.add(new YoutubeVideoObject(videoId, text));
+            ArrayList<HashMap<String, HashMap<String, HashMap<String, HashMap>>>> list = (ArrayList<HashMap<String, HashMap<String, HashMap<String, HashMap>>>>) response.getContents().getTwoColumnBrowseResultsRenderer().getTabs().get(1).getTabRenderer().getContent().get("richGridRenderer").get("contents");
+            for (HashMap<String, HashMap<String, HashMap<String, HashMap>>> map : list) {
+                if (map.get("richItemRenderer") != null) {
+                    String videoId = (String)map.get("richItemRenderer").get("content").get("videoRenderer").get("videoId");
+                    videosList.add(new YoutubeVideoObject(videoId, "TITLE"));
                 }
             }
         } catch (JsonProcessingException e) {

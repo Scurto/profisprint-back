@@ -1,7 +1,13 @@
 package com.profisprint.service.impl;
 
+import com.profisprint.service.CaptchaService;
 import com.profisprint.service.ProfitcentrService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
@@ -19,53 +25,300 @@ import java.util.Scanner;
 
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class ProfitcentrServiceImpl implements ProfitcentrService {
 
-    @Autowired
-    private RestTemplate restTemplate;
+    private final CaptchaService captchaService;
 
     @Override
-    public void test() {
+    public void openCategory(WebDriver driver, String name) {
+        try {
+            WebElement menu = driver.findElement(By.id("mnu_tblock1"));
+            List<WebElement> categories = menu.findElements(By.tagName("a"));
+            WebElement youtubeCategory = null;
+            for (WebElement category : categories) {
+                if (name.equalsIgnoreCase(category.getText())) {
+                    youtubeCategory = category;
+                }
+            }
+            Thread.sleep(2000);
+            youtubeCategory.click();
+            Thread.sleep(2000);
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
+    }
 
+    @Override
+    public void openMenu(WebDriver driver, String name) {
+        try {
+            if (driver.findElement(By.id("maincolumn")).findElements(By.className("out-capcha-title")).size() > 0) {
+                String capchaTitle = "";
+                WebElement menu = driver.findElement(By.id("maincolumn")).findElement(By.className("out-capcha-title"));
+                capchaTitle = menu.getText().trim();
+                System.out.println(capchaTitle);
 
-//        String url = "https://profitcentr.com/work-task";
-//        HttpHeaders headers = new HttpHeaders();
+                List<WebElement> capchaImgElements = driver.findElements(By.className("out-capcha-lab"));
 
-//        many times by youtube
-//        headers.set("Cookie", "PHPSESSID=3l5v60sgt6p8fls323dia11qe5; _ym_d=1636399001; _ym_uid=1636399001736919284; hostname_sf=seo-fast.ru; _ym_visarc_4246883123=e1906acab58b34a90c17f1a4589ba89a; _buzz_fpc_=feaf02bebbfe7071c1c07e768565ebc2; _ym_visarc_4246983123=6068f2ea23164b07611c6b805e5e9dca; _ym_visarc_42461083123=1dcc84c87e103319e323255d3b3c2a6c; _vid_t=jsxgWSd3uIZZrIkWuMoCuBfqVRgVgbqrLdJXUjDMDGr5V0DV6zrJLN5SsTZ4/WzY1Gw39gVY3utdDmvumcU974pPTA==; _ym_visarc_42461183123=3c9c8837f83d596a4d2b922ea889d8d9; _ym_visarc_42461283123=7cec376c5d0e23521bc05042fa3833d5; _ga=GA1.2.883346684.1636718451; _gid=GA1.2.1614223963.1636718452; _ym_visarc_42461383123=147493c0bbbe1a645987598c64b98bf8; _ym_visarc_42461483123=0d5f7ed877efcf75c2f65a5417432fc5; _ym_visarc_42461583123=7a2ae8b2040f207d4bdef4d6cbd12e3e; _ym_visarc_42461683123=961f06b63cab4d02b44fe11db97f4dfe; _ym_visarc_42461783123=855bddc757279350f0ebb35b9011fc4f; _ym_visarc_42461883123=18f835bc376f73224c96e744c8e8bc54; _ym_visarc_42461983123=c7686af9bb003ea48390a91a1520b84c; _ym_visarc_42462083123=62ac5c9f2e435bf33136e27f3600d813; menu_g1=0; _ym_visarc_42462183123=65923c2b541a9167c025899a9e2502f2; _ym_visarc_42462283123=d66426b9fe5428f6083e20fc4a7fcfb6; _ym_visarc_42462383123=1161804a567dde02c91990b533dd5726; _ym_visarc_42462483123=0c60c479c5bbf781940a8033ebf4289a; window_popup3=1; _ym_visarc_42462583123=76c4606eee731bd0e76296bbd0ac1e0b; _ym_visarc_42462683123=4212071a7a3a58807355c95ca53809a1; window_popup_25=1; _ym_visarc_42462783123=92b794122ad9213b4353c1f339de4922; _ym_visarc_42462883123=c027cff4e53b0cb683d1d2d621c07eaf; taskfilter3=100; taskfilter4=100; id_us_t=; taskurl=; search_all_tt=; _ym_visarc_42462983123=22f596acedc5d2987286957054fb8ea1; fingerprint=f3a236d53eee648883f5f3864d28c8b2; id_task=; due_date=0; search_all_td=0; taskpricemax=0; taskpricemin=0; taskfilter1=98; taskfilter2=17; evercookie_cache=09255f52641471a340d1db7a29a3b006; evercookie_etag=09255f52641471a340d1db7a29a3b006; evercookie_png=09255f52641471a340d1db7a29a3b006; entrance=09255f52641471a340d1db7a29a3b006; window_popup_y=1; _ym_visarc_42463083123=302217cfd1ce4430a9bacfae59e75e15; _ym_isad=1; taskuser=; __gads=ID=65ee2bb6fefafe20-22137c0513cc0050:T=1636399001:RT=1638269094:S=ALNI_MY0_lvxkduJ8gqP_6bSHHTgYIfJZQ");
-//        favorites by youtube
-//        headers.set("Cookie", "PHPSESSID=3l5v60sgt6p8fls323dia11qe5; _ym_d=1636399001; _ym_uid=1636399001736919284; hostname_sf=seo-fast.ru; _ym_visarc_4246883123=e1906acab58b34a90c17f1a4589ba89a; _buzz_fpc_=feaf02bebbfe7071c1c07e768565ebc2; _ym_visarc_4246983123=6068f2ea23164b07611c6b805e5e9dca; _ym_visarc_42461083123=1dcc84c87e103319e323255d3b3c2a6c; _vid_t=jsxgWSd3uIZZrIkWuMoCuBfqVRgVgbqrLdJXUjDMDGr5V0DV6zrJLN5SsTZ4/WzY1Gw39gVY3utdDmvumcU974pPTA==; _ym_visarc_42461183123=3c9c8837f83d596a4d2b922ea889d8d9; _ym_visarc_42461283123=7cec376c5d0e23521bc05042fa3833d5; _ga=GA1.2.883346684.1636718451; _gid=GA1.2.1614223963.1636718452; _ym_visarc_42461383123=147493c0bbbe1a645987598c64b98bf8; _ym_visarc_42461483123=0d5f7ed877efcf75c2f65a5417432fc5; _ym_visarc_42461583123=7a2ae8b2040f207d4bdef4d6cbd12e3e; _ym_visarc_42461683123=961f06b63cab4d02b44fe11db97f4dfe; _ym_visarc_42461783123=855bddc757279350f0ebb35b9011fc4f; _ym_visarc_42461883123=18f835bc376f73224c96e744c8e8bc54; _ym_visarc_42461983123=c7686af9bb003ea48390a91a1520b84c; _ym_visarc_42462083123=62ac5c9f2e435bf33136e27f3600d813; menu_g1=0; _ym_visarc_42462183123=65923c2b541a9167c025899a9e2502f2; _ym_visarc_42462283123=d66426b9fe5428f6083e20fc4a7fcfb6; _ym_visarc_42462383123=1161804a567dde02c91990b533dd5726; _ym_visarc_42462483123=0c60c479c5bbf781940a8033ebf4289a; window_popup3=1; _ym_visarc_42462583123=76c4606eee731bd0e76296bbd0ac1e0b; _ym_visarc_42462683123=4212071a7a3a58807355c95ca53809a1; window_popup_25=1; _ym_visarc_42462783123=92b794122ad9213b4353c1f339de4922; _ym_visarc_42462883123=c027cff4e53b0cb683d1d2d621c07eaf; taskfilter3=100; taskurl=; id_us_t=; taskfilter4=100; search_all_tt=; _ym_visarc_42462983123=22f596acedc5d2987286957054fb8ea1; fingerprint=f3a236d53eee648883f5f3864d28c8b2; id_task=; due_date=0; taskpricemin=0; taskpricemax=0; search_all_td=0; taskfilter2=17; evercookie_cache=09255f52641471a340d1db7a29a3b006; evercookie_etag=09255f52641471a340d1db7a29a3b006; evercookie_png=09255f52641471a340d1db7a29a3b006; entrance=09255f52641471a340d1db7a29a3b006; window_popup_y=1; _ym_visarc_42463083123=302217cfd1ce4430a9bacfae59e75e15; _ym_isad=1; taskuser=; __gads=ID=65ee2bb6fefafe20-22137c0513cc0050:T=1636399001:RT=1638269094:S=ALNI_MY0_lvxkduJ8gqP_6bSHHTgYIfJZQ; taskfilter1=96");
-//        on check by youtube
-//        headers.set("Cookie", "_ym_uid=1630042077394355451; _ym_d=1630042077; vblock1=1; SESSIONID=nh03q461h3vg2fk8681orac87l; sort_task_5=16; sort_task_1=0; toschat=yes; sort_task_3=0; viewtask=812650; sort_task_2=0; io=tprJpOBQI2AqUni9KIqf; newprov_etag=ac3916f9265a6e1c9766b55d2b9afbe6; newprov_cache=ac3916f9265a6e1c9766b55d2b9afbe6; newprov_png=ac3916f9265a6e1c9766b55d2b9afbe6; menu_ref=ac3916f9265a6e1c9766b55d2b9afbe6");
+                if ("Отметьте изображения с цветами".equalsIgnoreCase(capchaTitle)) {
+                    profitcentrCaptchaClick(capchaImgElements, "изображения с цветами");
+                } else if ("Отметьте изображения с мотоциклами".equalsIgnoreCase(capchaTitle)) {
+                    profitcentrCaptchaClick(capchaImgElements, "изображения с мотоциклами");
+                } else if ("Отметьте изображения с девушками".equalsIgnoreCase(capchaTitle)) {
+                    profitcentrCaptchaClick(capchaImgElements, "изображения с девушками");
+                } else if ("Отметьте изображения с машинами".equalsIgnoreCase(capchaTitle)) {
+                    profitcentrCaptchaClick(capchaImgElements, "изображения с машинами");
+                } else if ("Отметьте изображения с животными".equalsIgnoreCase(capchaTitle)) {
+                    profitcentrCaptchaClick(capchaImgElements, "изображения с животными");
+                } else {
+                    for (WebElement element : capchaImgElements) {
+                        String style = element.getAttribute("style");
+                        String url = style.substring(style.indexOf("(")+2, style.indexOf(")")-1);
+                        System.out.println("url => " + url);
+                    }
+                }
+                throw new RuntimeException("CAPTCHA ENABLED");
+            }
 
+            WebElement filterLine = driver.findElement(By.id("maincolumn")).findElement(By.className("filterlines"));
+            List<WebElement> filterLineCategories = filterLine.findElements(By.tagName("a"));
+            WebElement subscribeCategory = null;
+            for (WebElement category : filterLineCategories) {
+                if (name.equalsIgnoreCase(category.getText())) {
+                    subscribeCategory = category;
+                }
+            }
+            Thread.sleep(2000);
+            subscribeCategory.click();
+            Thread.sleep(2000);
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
+    }
 
-//        HttpEntity<Void> requestEntity = new HttpEntity<>(headers);
-//        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, requestEntity, String.class);
-//
-//        System.out.println(response);
+    @Override
+    public String startSubscribeTask(WebDriver driver) {
+        try {
+            if (driver.findElements(By.id("work-youtube")).size() == 0) {
+                System.out.println("maybe list empty");
+                Thread.sleep(3000);
+                openMenu(driver, "Подписки");
+                Thread.sleep(3000);
+                if (driver.findElements(By.id("work-youtube")).size() == 0) {
+                    throw new RuntimeException("Subscribe list empty");
+                }
+            }
+            WebElement table = driver.findElement(By.id("work-youtube")).findElement(By.tagName("table"));
+            String tableId = table.getAttribute("id");
+            String taskId = tableId.split("-")[2];
+            List<WebElement> elements = driver.findElement(By.id("start-podp-" + taskId)).findElements(By.tagName("span"));
+            WebElement startBtn1 = null;
+            String channelUrl = null;
+            for (WebElement element : elements) {
+                if (element.getAttribute("title") != null && !element.getAttribute("title").isEmpty()) {
+                    startBtn1 = element;
+                    channelUrl = element.getAttribute("title");
+                }
+            }
+            Thread.sleep(2000);
+            startBtn1.click();
+            Thread.sleep(2000);
 
-        String file ="D:/Cookies";
+            if (driver.findElements(By.className("youtube-error")).size() > 0) {
+                WebElement error = driver.findElement(By.className("youtube-error"));
+                if ("Задание уже начали выполнять необходимое кол-во пользователей".equalsIgnoreCase(error.getText())) {
+                    List<WebElement> claimRow = driver.findElement(By.className("podp_"+taskId)).findElements(By.tagName("a"));
+                    WebElement claimBtn = null;
+                    for (WebElement element : claimRow) {
+                        if ("Подать жалобу на площадку".equalsIgnoreCase(element.getAttribute("title"))) {
+                            claimBtn = element;
+                        }
+                    }
+                    claimBtn.click();
+                    Thread.sleep(2000);
 
-//        File myObj = new File(file);
-//        if (myObj.exists()) {
-//            System.out.println("File name: " + myObj.getName());
-//            System.out.println("Absolute path: " + myObj.getAbsolutePath());
-//            System.out.println("Writeable: " + myObj.canWrite());
-//            System.out.println("Readable " + myObj.canRead());
-//            System.out.println("File size in bytes " + myObj.length());
-//        } else {
-//            System.out.println("The file does not exist.");
-//        }
-//
-//        try {
-//            BufferedReader br = new BufferedReader(new FileReader(file));
-//            String st;
-//            while ((st = br.readLine()) != null) {
-//                System.out.println(st);
-//            }
-//        } catch (Exception ex) {
-//            System.out.println("ex");
-//        }
+                    WebElement popup = driver.findElement(By.id("popup"));
+                    List<WebElement> categories = popup.findElements(By.tagName("input"));
+                    WebElement claimCategory = null;
+                    for (WebElement category : categories) {
+                        System.out.println("category text => " + category.getAttribute("value"));
+                        if ("Видео с ограниченным доступом".equalsIgnoreCase(category.getAttribute("value"))) {
+                            claimCategory = category;
+                        }
+                    }
+                    claimCategory.click();
+                    Thread.sleep(2000);
+                }
+                throw new RuntimeException(error.getText());
+            }
+            WebElement startBtn2 = driver.findElement(By.id("ads-lk-" + taskId)).findElement(By.tagName("span"));
+            startBtn2.click();
+            Thread.sleep(2000);
+            return channelUrl;
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
+    }
 
+    @Override
+    public String switchToNextTaskPage(WebDriver driver, String profisprintWindow) {
+        String nextWindow = "";
+        try {
+            Thread.sleep(4000);
+            for (String windowHandle : driver.getWindowHandles()) {
+                if(!profisprintWindow.equalsIgnoreCase(windowHandle)) {
+                    nextWindow = windowHandle;
+                    System.out.println("nextWindow -> " + nextWindow);
+                    driver.switchTo().window(nextWindow);
+                }
+            }
+            return nextWindow;
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Override
+    public void startEmbeddedVideo(WebDriver driver) {
+        try {
+            WebElement timerElement = driver.findElement(By.id("timer"));
+            Integer time = (Integer.parseInt(timerElement.getText()) + 10) * 1000;
+            System.out.println("time to wait -> " + time);
+
+            WebElement menu = driver.findElement(By.id("video-start"));
+            menu.click();
+            Thread.sleep(time);
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Override
+    public void openYoutubePageAndSubscribe(WebDriver driver, String channelUrl, String profisprintWindow, String oceanwmWindow) {
+        try {
+            String youtubeWindow = "";
+            WebElement orangeBtnStart = driver.findElement(By.className("podp-go")).findElement(By.tagName("a"));
+            orangeBtnStart.click();
+            Thread.sleep(2000);
+
+            for (String windowHandle : driver.getWindowHandles()) {
+                if(!profisprintWindow.equalsIgnoreCase(windowHandle) && !oceanwmWindow.equalsIgnoreCase(windowHandle)) {
+                    youtubeWindow = windowHandle;
+                    System.out.println("youtubeWindow -> " + youtubeWindow);
+                    driver.switchTo().window(youtubeWindow);
+                }
+            }
+            driver.get(channelUrl);
+            Thread.sleep(3000);
+
+            WebElement youtubeSubscribeBtn = driver.findElement(By.id("subscribe-button-shape"));
+            youtubeSubscribeBtn.click();
+            Thread.sleep(3000);
+            driver.close();
+
+            driver.switchTo().window(oceanwmWindow);
+            Thread.sleep(3000);
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Override
+    public void selectAnswerAndConfirmTask(WebDriver driver, String channelUrl) {
+        try {
+            WebElement selectElement = driver.findElement(By.name("otv"));
+            Select select = new Select(selectElement);
+            select.selectByValue(channelUrl.substring(channelUrl.indexOf("channel/")+8));
+
+            Thread.sleep(2000);
+
+            WebElement confirmTask = driver.findElement(By.className("butt-nw"));
+            confirmTask.click();
+
+            Thread.sleep(2000);
+            driver.close();
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Override
+    public String startVideoTask(WebDriver driver) {
+        try {
+            if (driver.findElements(By.id("work-youtube")).size() == 0) {
+                System.out.println("maybe list empty");
+                Thread.sleep(3000);
+                openMenu(driver, "Видео");
+                Thread.sleep(3000);
+                if (driver.findElements(By.id("work-youtube")).size() == 0) {
+                    throw new RuntimeException("Video list empty");
+                }
+            }
+
+            List<WebElement> table = driver.findElement(By.id("work-youtube")).findElements(By.tagName("table"));
+            WebElement row = table.get(0);
+            String tableId = row.getAttribute("id");
+            String taskId = tableId.split("-")[2];
+            List<WebElement> elements = driver.findElement(By.id("start-ads-" + taskId)).findElements(By.tagName("span"));
+            WebElement startBtn1 = null;
+            for (WebElement element : elements) {
+                if (element.getAttribute("title") != null && !element.getAttribute("title").isEmpty()) {
+                    startBtn1 = element;
+                }
+            }
+            Thread.sleep(2000);
+            startBtn1.click();
+            Thread.sleep(2000);
+            WebElement startBtn2 = driver.findElement(By.id("ads-lk-" + taskId)).findElement(By.tagName("span"));
+            startBtn2.click();
+            Thread.sleep(2000);
+            return null;
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Override
+    public void openYoutubePageAndStartVideo(WebDriver driver, String profisprintWindow, String videoWindow) {
+        try {
+            WebElement timerElement = driver.findElement(By.id("tmr"));
+            Integer time = (Integer.parseInt(timerElement.getText()) + 10) * 1000;
+            System.out.println("time to wait -> " + time);
+
+            WebElement menu = driver.findElement(By.id("video-start"));
+            menu.click();
+            Thread.sleep(time);
+            System.out.println("DONE");
+            WebElement confirmBtn = driver.findElement(By.id("capcha-tr-block")).findElement(By.tagName("button"));
+            confirmBtn.click();
+            Thread.sleep(3000);
+            driver.close();
+            driver.switchTo().window(profisprintWindow);
+            Thread.sleep(3000);
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    private void profitcentrCaptchaClick(List<WebElement> capchaImgElements, String category) {
+        for (int i = 0; i < capchaImgElements.size(); i++) {
+            String style = capchaImgElements.get(i).getAttribute("style");
+            String url = style.substring(style.indexOf("(")+2, style.indexOf(")")-1);
+            System.out.println("url => " + url);
+            boolean value = captchaService.isImageInGroup(url, category);
+            System.out.println("Value "+i+ " should be clicked-> "+value);
+            if (value) {
+                capchaImgElements.get(i).click();
+            }
+        }
     }
 }

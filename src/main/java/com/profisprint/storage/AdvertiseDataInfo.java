@@ -376,11 +376,289 @@ public class AdvertiseDataInfo {
                 ))
         );
 
+        advertises.put("bigquest.com.ua", model(
+                "https://bigquest.com.ua/",
+                "bigquest.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://bigquest.com.ua/quest/big-kids-quest/", ""),
+                        new SecondaryAdvertiseModel("https://bigquest.com.ua/quest/tajnaya-stantsiya-metro/", ""),
+                        new SecondaryAdvertiseModel("https://bigquest.com.ua/blog-4/", ""),
+                        new SecondaryAdvertiseModel("https://bigquest.com.ua/pravila-2/", ""),
+                        new SecondaryAdvertiseModel("https://bigquest.com.ua/gallery/", ""),
+                        new SecondaryAdvertiseModel("https://bigquest.com.ua/kontakty-2/", "")
+                ))
+        );
 
+        advertises.put("eyes.ua", model(
+                "https://eyes.ua/posluhy/лазерна-корекція-зору/",
+                "eyes.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://eyes.ua/tsiny/", ""),
+                        new SecondaryAdvertiseModel("https://eyes.ua/aktsiyi/", ""),
+                        new SecondaryAdvertiseModel("https://eyes.ua/posluhy/дитяче-відділення/", ""),
+                        new SecondaryAdvertiseModel("https://eyes.ua/posluhy/перевірка-зору/", ""),
+                        new SecondaryAdvertiseModel("https://eyes.ua/zakhvoryuvannya-ochey/симптоми-захворювання-очей/", ""),
+                        new SecondaryAdvertiseModel("https://eyes.ua/posluhy/лікування-катаракти/", ""),
+                        new SecondaryAdvertiseModel("https://eyes.ua/zakhvoryuvannya-ochey/глаукома/", "")
+                ))
+        );
 
-//        https://bigquest.com.ua/?gclid=CjwKCAiA2pyuBhBKEiwApLaIO3Yikudjmo8n6CjTcbUoOI6zUUiVzUPUY-91lZYFImwRjYZCJQX-zhoCfdAQAvD_BwE
+        advertises.put("brocard.ua", model(
+                "https://www.brocard.ua/ua/promotion/",
+                "brocard.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://www.brocard.ua/ua/category/parfumeriya", ""),
+                        new SecondaryAdvertiseModel("https://www.brocard.ua/ua/category/podarki-b", ""),
+                        new SecondaryAdvertiseModel("https://www.brocard.ua/ua/category/makiyazh-4048", ""),
+                        new SecondaryAdvertiseModel("https://www.brocard.ua/ua/category/aksesuari", ""),
+                        new SecondaryAdvertiseModel("https://www.brocard.ua/ua/category/podarunkovi-karti", ""),
+                        new SecondaryAdvertiseModel("https://www.brocard.ua/ua/category/doglyad-za-oblichchyam-ta-ochami", "")
+                ))
+        );
 
+        advertises.put("ryaba.ua", model(
+                "https://ryaba.ua/apetytna/",
+                "ryaba.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://ryaba.ua/ryabchick/", ""),
+                        new SecondaryAdvertiseModel("https://ryaba.ua/superfileo/", ""),
+                        new SecondaryAdvertiseModel("https://ryaba.ua/actions/", ""),
+                        new SecondaryAdvertiseModel("https://ryaba.ua/about-ryaba/", ""),
+                        new SecondaryAdvertiseModel("https://ryaba.ua/about-ryaba/expert-care/", ""),
+                        new SecondaryAdvertiseModel("https://ryaba.ua/staty-partnerom/", "")
+                ))
+        );
 
+        advertises.put("www.lorcoffee.com.ua", model(
+                "https://www.lorcoffee.com.ua/",
+                "www.lorcoffee.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://www.lorcoffee.com.ua/assortment/capsules/", ""),
+                        new SecondaryAdvertiseModel("https://www.lorcoffee.com.ua/assortment/roast-and-ground/", ""),
+                        new SecondaryAdvertiseModel("https://www.lorcoffee.com.ua/assortment/beans/", ""),
+                        new SecondaryAdvertiseModel("https://www.lorcoffee.com.ua/our-story/", ""),
+                        new SecondaryAdvertiseModel("https://www.lorcoffee.com.ua/our-story/coffee-tasting/", ""),
+                        new SecondaryAdvertiseModel("https://www.lorcoffee.com.ua/our-story/compatibility/", "")
+                ))
+        );
+
+        advertises.put("elemis.com.ua", model(
+                "https://elemis.com.ua/specials/",
+                "elemis.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://elemis.com.ua/products/", ""),
+                        new SecondaryAdvertiseModel("https://elemis.com.ua/bestsellery/", ""),
+                        new SecondaryAdvertiseModel("https://elemis.com.ua/novinki/", ""),
+                        new SecondaryAdvertiseModel("https://elemis.com.ua/uhod_za_licom/", ""),
+                        new SecondaryAdvertiseModel("https://elemis.com.ua/uhod_za_telom/", ""),
+                        new SecondaryAdvertiseModel("https://elemis.com.ua/nabory/", "")
+                ))
+        );
+
+        advertises.put("dila.ua", model(
+                "https://dila.ua/price.html",
+                "dila.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://dila.ua/laboratory/zagalnoklinichna.html", ""),
+                        new SecondaryAdvertiseModel("https://dila.ua/laboratory/patomorfologiya.html", ""),
+                        new SecondaryAdvertiseModel("https://dila.ua/laboratory/imunologiya-alergologiya.html", ""),
+                        new SecondaryAdvertiseModel("https://dila.ua/laboratory/mikrobiologiya.html", ""),
+                        new SecondaryAdvertiseModel("https://dila.ua/laboratory/cytogentyka.html", ""),
+                        new SecondaryAdvertiseModel("https://dila.ua/laboratory/molekulyarno-genetychniy-analiz.html", "")
+                ))
+        );
+
+        advertises.put("www.nissan.ua", model(
+                "https://www.nissan.ua/ownership/promo_service.html",
+                "www.nissan.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://www.nissan.ua/ownership/maintenance-and-servicing/maintenance-and-repair.html", ""),
+                        new SecondaryAdvertiseModel("https://www.nissan.ua/ownership/accessories-and-equipement/accessories.html", ""),
+                        new SecondaryAdvertiseModel("https://www.nissan.ua/ownership/nissan-warranty.html", ""),
+                        new SecondaryAdvertiseModel("https://www.nissan.ua/ownership/assistance-inssurance-and-warranty/assistance.html", ""),
+                        new SecondaryAdvertiseModel("https://www.nissan.ua/ownership/nissan-service-promise.html", ""),
+                        new SecondaryAdvertiseModel("https://www.nissan.ua/ownership/nissan-connect-apps.html", "")
+                ))
+        );
+
+        advertises.put("akpp.co.ua", model(
+                "https://akpp.co.ua/",
+                "akpp.co.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://akpp.co.ua/o-firme/", ""),
+                        new SecondaryAdvertiseModel("https://akpp.co.ua/uslugi/", ""),
+                        new SecondaryAdvertiseModel("https://akpp.co.ua/nashi-klienty/", ""),
+                        new SecondaryAdvertiseModel("https://akpp.co.ua/ceny/", ""),
+                        new SecondaryAdvertiseModel("https://akpp.co.ua/kontakty/", "")
+                ))
+        );
+
+        advertises.put("holz.ua", model(
+                "https://holz.ua/ua/akcii/",
+                "holz.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://holz.ua/ua/dveri/mezhkomnatnye/", ""),
+                        new SecondaryAdvertiseModel("https://holz.ua/ua/dveri/vhodnye/", ""),
+                        new SecondaryAdvertiseModel("https://holz.ua/ua/pol/", ""),
+                        new SecondaryAdvertiseModel("https://holz.ua/ua/stenovye-paneli/", ""),
+                        new SecondaryAdvertiseModel("https://holz.ua/ua/aksessuary/", ""),
+                        new SecondaryAdvertiseModel("https://holz.ua/ua/stores/", "")
+                ))
+        );
+
+        advertises.put("mako.in.ua", model(
+                "https://mako.in.ua/",
+                "mako.in.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://mako.in.ua/service/list/inektsiyna-kosmetologiya", ""),
+                        new SecondaryAdvertiseModel("https://mako.in.ua/service/list/lazerna-kosmetologiya", ""),
+                        new SecondaryAdvertiseModel("https://mako.in.ua/service/list/masazh-ruchniy", ""),
+                        new SecondaryAdvertiseModel("https://mako.in.ua/service/list/aparatna-korektsiya-figuri", ""),
+                        new SecondaryAdvertiseModel("https://mako.in.ua/service/list/lazerna-yepilyatsiya-2", ""),
+                        new SecondaryAdvertiseModel("https://mako.in.ua/service/list/permanentniy-makiyazh-2", "")
+                ))
+        );
+
+        advertises.put("super-money-counters.com.ua", model(
+                "https://super-money-counters.com.ua/",
+                "super-money-counters.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://super-money-counters.com.ua/counters/", ""),
+                        new SecondaryAdvertiseModel("https://super-money-counters.com.ua/detectors/", ""),
+                        new SecondaryAdvertiseModel("https://super-money-counters.com.ua/schetchiki-monet/", ""),
+                        new SecondaryAdvertiseModel("https://super-money-counters.com.ua/vesy/", ""),
+                        new SecondaryAdvertiseModel("https://super-money-counters.com.ua/printery-chekov/", ""),
+                        new SecondaryAdvertiseModel("https://super-money-counters.com.ua/printery-dlya-pechati-etiketok/", "")
+                ))
+        );
+
+        advertises.put("apexauto.com.ua", model(
+                "https://apexauto.com.ua/price/",
+                "apexauto.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://apexauto.com.ua/diagnostika-avtomobilya/", ""),
+                        new SecondaryAdvertiseModel("https://apexauto.com.ua/to-avto/", ""),
+                        new SecondaryAdvertiseModel("https://apexauto.com.ua/remont-hodovoj-chasti-avtomobilya/", ""),
+                        new SecondaryAdvertiseModel("https://apexauto.com.ua/diagnostika-dvigatelya/", ""),
+                        new SecondaryAdvertiseModel("https://apexauto.com.ua/chistka-forsunok/", ""),
+                        new SecondaryAdvertiseModel("https://apexauto.com.ua/kompyuternaya-diagnostika-avto/", "")
+                ))
+        );
+
+        advertises.put("mitsubishi-kyiv.niko.ua", model(
+                "https://mitsubishi-kyiv.niko.ua/news/zaproshuemo-na-obslugovuvannya-v-niko-avtoalyans",
+                "mitsubishi-kyiv.niko.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://mitsubishi-kyiv.niko.ua/offers", ""),
+                        new SecondaryAdvertiseModel("https://mitsubishi-kyiv.niko.ua/news", ""),
+                        new SecondaryAdvertiseModel("https://mitsubishi-kyiv.niko.ua/corporate-sales", ""),
+                        new SecondaryAdvertiseModel("https://mitsubishi-kyiv.niko.ua/test-drive", ""),
+                        new SecondaryAdvertiseModel("https://mitsubishi-kyiv.niko.ua/working-hours-dealers", ""),
+                        new SecondaryAdvertiseModel("https://mitsubishi-kyiv.niko.ua/maintenance-calculator", "")
+                ))
+        );
+
+        advertises.put("solofordiamonds.com.ua", model(
+                "https://solofordiamonds.com.ua/rings",
+                "solofordiamonds.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://solofordiamonds.com.ua/necklaces", ""),
+                        new SecondaryAdvertiseModel("https://solofordiamonds.com.ua/wedding_rings", ""),
+                        new SecondaryAdvertiseModel("https://solofordiamonds.com.ua/engagement", ""),
+                        new SecondaryAdvertiseModel("https://solofordiamonds.com.ua/solo_by", ""),
+                        new SecondaryAdvertiseModel("https://solofordiamonds.com.ua/bracelets", ""),
+                        new SecondaryAdvertiseModel("https://solofordiamonds.com.ua/earrings", "")
+                ))
+        );
+
+        advertises.put("www.purina.ua", model(
+                "https://www.purina.ua/",
+                "www.purina.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://www.purina.ua/find-a-pet/articles", ""),
+                        new SecondaryAdvertiseModel("https://www.purina.ua/dog/dog-food", ""),
+                        new SecondaryAdvertiseModel("https://www.purina.ua/cat/cat-food", ""),
+                        new SecondaryAdvertiseModel("https://www.purina.ua/pet-care", ""),
+                        new SecondaryAdvertiseModel("https://www.purina.ua/meet-purina", ""),
+                        new SecondaryAdvertiseModel("https://www.purina.ua/our-impact", "")
+                ))
+        );
+
+        advertises.put("liko-school.kyiv.ua", model(
+                "https://liko-school.kyiv.ua/uk/",
+                "liko-school.kyiv.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://liko-school.kyiv.ua/uk/headers/dlia-batkiv", ""),
+                        new SecondaryAdvertiseModel("https://liko-school.kyiv.ua/uk/headers/komanda", ""),
+                        new SecondaryAdvertiseModel("https://liko-school.kyiv.ua/uk/headers/history", ""),
+                        new SecondaryAdvertiseModel("https://liko-school.kyiv.ua/uk/headers/infrastruktura", ""),
+                        new SecondaryAdvertiseModel("https://liko-school.kyiv.ua/uk/headers/shkilni-polityky", ""),
+                        new SecondaryAdvertiseModel("https://liko-school.kyiv.ua/uk/headers/zmi-pro-nas", "")
+                ))
+        );
+
+        advertises.put("tet-textile.com.ua", model(
+                "https://tet-textile.com.ua/ua/",
+                "tet-textile.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://tet-textile.com.ua/ua/g25109806-pledy-pokryvala-mikrofibry", ""),
+                        new SecondaryAdvertiseModel("https://tet-textile.com.ua/ua/g25898826-myagkie-igrushki-pledom", ""),
+                        new SecondaryAdvertiseModel("https://tet-textile.com.ua/ua/g121037959-plyushevoe-postelnoe-bele", ""),
+                        new SecondaryAdvertiseModel("https://tet-textile.com.ua/ua/g117842145-halaty", ""),
+                        new SecondaryAdvertiseModel("https://tet-textile.com.ua/ua/g95204013-pledy-rukavami", ""),
+                        new SecondaryAdvertiseModel("https://tet-textile.com.ua/ua/g101430078-pledy-svetyaschiesya-temnote", "")
+                ))
+        );
+
+        advertises.put("crystalit.com.ua", model(
+                "https://crystalit.com.ua/uk/",
+                "crystalit.com.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://crystalit.com.ua/uk/products/podokonniki-f1338084/", ""),
+                        new SecondaryAdvertiseModel("https://crystalit.com.ua/uk/products/aksessuary-dlya-okon-f106977/", ""),
+                        new SecondaryAdvertiseModel("https://crystalit.com.ua/uk/products/remont-okon-f106980/", ""),
+                        new SecondaryAdvertiseModel("https://crystalit.com.ua/uk/products/lesomaterialy-f182172339/", ""),
+                        new SecondaryAdvertiseModel("https://crystalit.com.ua/uk/products/osteklenie-i-remont-balkonov-f194394/", ""),
+                        new SecondaryAdvertiseModel("https://crystalit.com.ua/uk/products/otkosy-na-okna-i-dveri-f106978/", "")
+                ))
+        );
+
+        advertises.put("jcs.ua", model(
+                "https://jcs.ua/ua/",
+                "jcs.ua",
+                "UA",
+                List.of(
+                        new SecondaryAdvertiseModel("https://jcs.ua/ua/gitary-i-bas-gitary/", ""),
+                        new SecondaryAdvertiseModel("https://jcs.ua/ua/klavishnye-instrumenty/", ""),
+                        new SecondaryAdvertiseModel("https://jcs.ua/ua/barabany-i-perkussiya/", ""),
+                        new SecondaryAdvertiseModel("https://jcs.ua/ua/studiinoe-oborudovanie/", ""),
+                        new SecondaryAdvertiseModel("https://jcs.ua/ua/zvukovoe-oborudovanie/", ""),
+                        new SecondaryAdvertiseModel("https://jcs.ua/ua/mikrofony-i-radiosistemy/", "")
+                ))
+        );
+
+//        https://www.bmw.ua/uk/topics/offers-and-services/special_offers.html
+//        https://www.lumident.kiev.ua/ua/services/skoraja-stomatologicheskaja-pomosch?gclid=Cj0KCQiArrCvBhCNARIsAOkAGcX3xRKdhVHBraRwbfTCD5h-r0qfpHVvoNgiXVaXRAUdrqaXqUBPYYMaApn3EALw_wcB
+//        https://viyar.ua/ua/news/do_30_na_gotovi_dveri_starke_dlya_shafi_kupe/?gclid=Cj0KCQiArrCvBhCNARIsAOkAGcU2PXFAATBbBlQqF8nWVXmRpeuZhzcH0smaxRrHjP7z_mnCZJxHzvQaAvAaEALw_wcB
 
 
 //        advertises.put("superhotel.kiev.ua", model(
@@ -521,20 +799,6 @@ public class AdvertiseDataInfo {
 //                        new SecondaryAdvertiseModel("https://gemini.ua/kontakty/", ""),
 //                        new SecondaryAdvertiseModel("https://gemini.ua/product-category/rancilio/", ""),
 //                        new SecondaryAdvertiseModel("https://gemini.ua/product-category/eureka/", "")
-//                ))
-//        );
-//        advertises.put("brocard.ua", model(
-//                "https://www.brocard.ua/ua/promotion/",
-//                "brocard.ua",
-//                "UA",
-//                List.of(
-//                        new SecondaryAdvertiseModel("https://www.brocard.ua/ua/brands-list", ""),
-//                        new SecondaryAdvertiseModel("https://www.brocard.ua/ua/category/parfumeriya", ""),
-//                        new SecondaryAdvertiseModel("https://www.brocard.ua/ua/category/doglyad-za-tilom", ""),
-//                        new SecondaryAdvertiseModel("https://www.brocard.ua/ua/category/aksesuari", ""),
-//                        new SecondaryAdvertiseModel("https://www.brocard.ua/ua/category/podarunkovi-karti", ""),
-//                        new SecondaryAdvertiseModel("https://www.brocard.ua/ua/category/doglyad-za-oblichchyam-ta-ochami", ""),
-//                        new SecondaryAdvertiseModel("https://www.brocard.ua/ua/category/dlya-cholovikiv", "")
 //                ))
 //        );
 ////        advertises.put("paradise-avenue.com.ua", model(
@@ -991,6 +1255,8 @@ public class AdvertiseDataInfo {
 //                        new SecondaryAdvertiseModel("", "")
 //                ))
 //        );
+
+//        https://majplast.pl/?gclid=CjwKCAiA_aGuBhACEiwAly57MYtrRvxXC3pwNBuIeIzmHRsAIRYvIS97xgvGPfiom5ue2lFI_Y9tqBoCWToQAvD_BwE
 
 
         return advertises;

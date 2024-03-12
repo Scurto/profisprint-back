@@ -63,8 +63,42 @@ public class GclidServiceImpl implements GclidService {
         return gclidFields.toString()+"gclid="+query;
     }
 
+//    @Override
+//    public String getRedirectUrl() {
+//        String redirectUrl = "";
+//        try {
+//            StringBuilder content = new StringBuilder();
+//            ArrayList<String> urls = new ArrayList<>();
+////            urls.add("https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-3755662197386269&output=html&h=90&slotname=4650414344&adk=2938419949&adf=2751417936&pi=t.ma~as.4650414344&w=728&psa=1&format=728x90&url=https%3A%2F%2Fwww.bigmir.net%2F&ea=0&flash=0&wgl=1&uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiOTUuMC40NjM4LjY5IixbXSxudWxsLG51bGwsIjY0Il0.&dt=1638014358905&bpp=10&bdt=127&idt=50&shv=r20211111&mjsv=m202111110101&ptt=9&saldr=aa&cookie=ID%3D00759a6af01232c2-22f0179002cc005b%3AT%3D1638014316%3ART%3D1638014316%3AS%3DALNI_MbQoLYS4Ka8ow3567nrFX6EU9eoUg&correlator=2421990979099&frm=23&ife=5&pv=1&ga_vid=2004021970.1638014313&ga_sid=1638014359&ga_hid=1854169710&ga_fc=1&nhd=1&u_tz=120&u_his=3&u_h=1080&u_w=1920&u_ah=1080&u_aw=1858&u_cd=24&dmc=8&adx=367&ady=0&biw=1461&bih=1010&isw=728&ish=90&ifk=3768487098&scr_x=0&scr_y=0&oid=2&pvsid=2950265974703419&pem=33&tmod=252376214&eae=2&fc=896&brdim=0%2C0%2C0%2C0%2C1858%2C0%2C1858%2C1080%2C728%2C90&vis=1&rsz=%7C%7CE%7C&abl=CS&pfx=0&fu=4&bc=31&ifi=1&uci=1.ifz87by1r7yv&fsb=1&dtd=72");
+//            urls.add("https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-2942876710357394&output=html&h=250&slotname=6774540725&adk=3217218781&adf=1248599740&pi=t.ma~as.6774540725&w=300&lmt=1706921732&format=300x250&url=https%3A%2F%2Fsinoptik.ua%2F%25D0%25BF%25D0%25BE%25D0%25B3%25D0%25BE%25D0%25B4%25D0%25B0-%25D0%25BA%25D0%25B8%25D0%25B5%25D0%25B2%2F10-%25D0%25B4%25D0%25BD%25D0%25B5%25D0%25B9&wgl=1&uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTA2LjAuNDk5OC42NiIsbnVsbCwwLG51bGwsIjY0IixbWyJOb3RfQSBCcmFuZCIsIjguMC4wLjAiXSxbIkNocm9taXVtIiwiMTIwLjAuNjA5OS4yNjgiXSxbIk9wZXJhIiwiMTA2LjAuNDk5OC42NiJdXSwwXQ..&dt=1706921732327&bpp=1&bdt=1095&idt=521&shv=r20240131&mjsv=m202401290101&ptt=9&saldr=aa&abxe=1&prev_fmts=0x0%2C300x250&nras=1&correlator=35339231195&frm=20&pv=1&ga_vid=843064988.1706921732&ga_sid=1706921733&ga_hid=1171837581&ga_fc=1&u_tz=120&u_his=4&u_h=1080&u_w=1920&u_ah=1080&u_aw=1858&u_cd=24&u_sd=1&dmc=8&adx=772&ady=833&biw=1841&bih=996&scr_x=0&scr_y=0&eid=44759875%2C44759926%2C31080779%2C95322183%2C95324155%2C95324160&oid=2&pvsid=1438044711857573&tmod=1702570878&uas=0&nvt=1&fc=1920&brdim=1920%2C0%2C1920%2C0%2C1858%2C0%2C1858%2C1080%2C1856%2C996&vis=1&rsz=%7C%7CleE%7C&abl=CS&pfx=0&fu=0&bc=31&bz=1&psd=W251bGwsbnVsbCxudWxsLDNd&ifi=3&uci=a!3&fsb=1&dtd=544");
+//            Collections.shuffle(urls);
+//            URL url = new URL(urls.get(0));
+//            URLConnection conn = url.openConnection();
+//            conn.setRequestProperty("Cookie", "ar_debug=1; IDE=AHWqTUngFQbCXOgP-pPVOS-FrwKcQreCaqA1TcTvplJLFcbx1YMKhUQIuDhoITHwUc0; DSID=ANfR7bM9wZz_kSwWchw8JCNn_8sZ046czUsZ1jH_DWXWhLwV_gCZQAUlWQrBcxbLQth8-WvpMHku7JDNYrHZlcD8M53jZKFn147A3r6wzDv2BJBFisDJwt2IbBXBGU70UEdrCyJ4wj4hNQC1PV5dAp_c-DOcD9kFww_jKF9pRuhgEnQPU_UCXy8DmjqUg406CpDHBxLRbynjsj4C6spE9eIctQN5FPxtF_geq_d_IsDXGGVyMJO2O6aERvQ7T3s6ZHLh2g8r24pq0fs6Vfj2LCgO_WM8BX4tQJT5u1Az4ROJfvQ9nfNFajk");
+//
+//            // open the stream and put it into BufferedReader
+//            BufferedReader br = new BufferedReader(
+//                    new InputStreamReader(conn.getInputStream()));
+//            String inputLine;
+//            while ((inputLine = br.readLine()) != null) {
+//                content.append(inputLine + "\n");
+//            }
+//            System.out.println(content);
+//            String substring1 = content.substring(content.indexOf("<a id=\"aw0\" target=\"_top\" href=\"") + 32);
+//            redirectUrl = substring1.substring(0, substring1.indexOf("\""));
+//            br.close();
+//
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//        return redirectUrl;
+//    }
+
     @Override
-    public String getRedirectUrl() {
+    public String getRedirectUrl2() {
         String redirectUrl = "";
         try {
             StringBuilder content = new StringBuilder();
@@ -74,41 +108,9 @@ public class GclidServiceImpl implements GclidService {
             Collections.shuffle(urls);
             URL url = new URL(urls.get(0));
             URLConnection conn = url.openConnection();
-            conn.setRequestProperty("Cookie", "ar_debug=1; IDE=AHWqTUmVQ9rXZlMp44TffMa38BSGi4msTcBKC6298MnAh-kNFrDnh-xtXmb14pWLZ4M; receive-cookie-deprecation=1; DSID=ANfR7bPGTPEUByzBJuSbp0NQf_N9qRd43yyJI4QW85a5rGaF1ZBWaJzWkKVBlQ9oep0Hjld0rj2DXAuW6729svpCkMFrnaTa-kj3F-hdj81HzWssm53X4HhVwBGGzZbVCuyDyEcjVN7lK5J77As5uI5RZVruBMVWPFO_peAn082IGCqS39YjN09M1i33g9IvIQ1x93GtAkcB0CG8qiJR0sf1Fd9sDGWlmRkpmiNUWAAFKi1IXgN0O0lqdVu2qwtsqJRTdxOGP-svVNHNBm5TczVGlEBRY-gFi2jSwnxZBL7NT18kLeZ1L3Y");
-
-            // open the stream and put it into BufferedReader
-            BufferedReader br = new BufferedReader(
-                    new InputStreamReader(conn.getInputStream()));
-            String inputLine;
-            while ((inputLine = br.readLine()) != null) {
-                content.append(inputLine + "\n");
-            }
-            System.out.println(content);
-            String substring1 = content.substring(content.indexOf("<a id=\"aw0\" target=\"_top\" href=\"") + 32);
-            redirectUrl = substring1.substring(0, substring1.indexOf("\""));
-            br.close();
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return redirectUrl;
-    }
-
-    @Override
-    public String getRedirectUrl2() {
-        String redirectUrl = "";
-        try {
-            StringBuilder content = new StringBuilder();
-            ArrayList<String> urls = new ArrayList<>();
-            urls.add("https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-3755662197386269&output=html&h=90&slotname=4650414344&adk=2938419949&adf=2751417936&pi=t.ma~as.4650414344&w=728&psa=1&format=728x90&url=https%3A%2F%2Fwww.bigmir.net%2F&ea=0&flash=0&wgl=1&uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiOTUuMC40NjM4LjY5IixbXSxudWxsLG51bGwsIjY0Il0.&dt=1638014358905&bpp=10&bdt=127&idt=50&shv=r20211111&mjsv=m202111110101&ptt=9&saldr=aa&cookie=ID%3D00759a6af01232c2-22f0179002cc005b%3AT%3D1638014316%3ART%3D1638014316%3AS%3DALNI_MbQoLYS4Ka8ow3567nrFX6EU9eoUg&correlator=2421990979099&frm=23&ife=5&pv=1&ga_vid=2004021970.1638014313&ga_sid=1638014359&ga_hid=1854169710&ga_fc=1&nhd=1&u_tz=120&u_his=3&u_h=1080&u_w=1920&u_ah=1080&u_aw=1858&u_cd=24&dmc=8&adx=367&ady=0&biw=1461&bih=1010&isw=728&ish=90&ifk=3768487098&scr_x=0&scr_y=0&oid=2&pvsid=2950265974703419&pem=33&tmod=252376214&eae=2&fc=896&brdim=0%2C0%2C0%2C0%2C1858%2C0%2C1858%2C1080%2C728%2C90&vis=1&rsz=%7C%7CE%7C&abl=CS&pfx=0&fu=4&bc=31&ifi=1&uci=1.ifz87by1r7yv&fsb=1&dtd=72");
-            urls.add("https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-2942876710357394&output=html&h=250&slotname=6774540725&adk=3217218781&adf=1248599740&pi=t.ma~as.6774540725&w=300&lmt=1706921732&format=300x250&url=https%3A%2F%2Fsinoptik.ua%2F%25D0%25BF%25D0%25BE%25D0%25B3%25D0%25BE%25D0%25B4%25D0%25B0-%25D0%25BA%25D0%25B8%25D0%25B5%25D0%25B2%2F10-%25D0%25B4%25D0%25BD%25D0%25B5%25D0%25B9&wgl=1&uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTA2LjAuNDk5OC42NiIsbnVsbCwwLG51bGwsIjY0IixbWyJOb3RfQSBCcmFuZCIsIjguMC4wLjAiXSxbIkNocm9taXVtIiwiMTIwLjAuNjA5OS4yNjgiXSxbIk9wZXJhIiwiMTA2LjAuNDk5OC42NiJdXSwwXQ..&dt=1706921732327&bpp=1&bdt=1095&idt=521&shv=r20240131&mjsv=m202401290101&ptt=9&saldr=aa&abxe=1&prev_fmts=0x0%2C300x250&nras=1&correlator=35339231195&frm=20&pv=1&ga_vid=843064988.1706921732&ga_sid=1706921733&ga_hid=1171837581&ga_fc=1&u_tz=120&u_his=4&u_h=1080&u_w=1920&u_ah=1080&u_aw=1858&u_cd=24&u_sd=1&dmc=8&adx=772&ady=833&biw=1841&bih=996&scr_x=0&scr_y=0&eid=44759875%2C44759926%2C31080779%2C95322183%2C95324155%2C95324160&oid=2&pvsid=1438044711857573&tmod=1702570878&uas=0&nvt=1&fc=1920&brdim=1920%2C0%2C1920%2C0%2C1858%2C0%2C1858%2C1080%2C1856%2C996&vis=1&rsz=%7C%7CleE%7C&abl=CS&pfx=0&fu=0&bc=31&bz=1&psd=W251bGwsbnVsbCxudWxsLDNd&ifi=3&uci=a!3&fsb=1&dtd=544");
-            Collections.shuffle(urls);
-            URL url = new URL(urls.get(0));
-            URLConnection conn = url.openConnection();
-            conn.setRequestProperty("Cookie", "ar_debug=1; IDE=AHWqTUmVQ9rXZlMp44TffMa38BSGi4msTcBKC6298MnAh-kNFrDnh-xtXmb14pWLZ4M; receive-cookie-deprecation=1; DSID=ANfR7bPGTPEUByzBJuSbp0NQf_N9qRd43yyJI4QW85a5rGaF1ZBWaJzWkKVBlQ9oep0Hjld0rj2DXAuW6729svpCkMFrnaTa-kj3F-hdj81HzWssm53X4HhVwBGGzZbVCuyDyEcjVN7lK5J77As5uI5RZVruBMVWPFO_peAn082IGCqS39YjN09M1i33g9IvIQ1x93GtAkcB0CG8qiJR0sf1Fd9sDGWlmRkpmiNUWAAFKi1IXgN0O0lqdVu2qwtsqJRTdxOGP-svVNHNBm5TczVGlEBRY-gFi2jSwnxZBL7NT18kLeZ1L3Y");
+//            conn.setRequestProperty("Cookie", "ar_debug=1; IDE=AHWqTUmVQ9rXZlMp44TffMa38BSGi4msTcBKC6298MnAh-kNFrDnh-xtXmb14pWLZ4M; receive-cookie-deprecation=1; DSID=ANfR7bPGTPEUByzBJuSbp0NQf_N9qRd43yyJI4QW85a5rGaF1ZBWaJzWkKVBlQ9oep0Hjld0rj2DXAuW6729svpCkMFrnaTa-kj3F-hdj81HzWssm53X4HhVwBGGzZbVCuyDyEcjVN7lK5J77As5uI5RZVruBMVWPFO_peAn082IGCqS39YjN09M1i33g9IvIQ1x93GtAkcB0CG8qiJR0sf1Fd9sDGWlmRkpmiNUWAAFKi1IXgN0O0lqdVu2qwtsqJRTdxOGP-svVNHNBm5TczVGlEBRY-gFi2jSwnxZBL7NT18kLeZ1L3Y");
+//            conn.setRequestProperty("Cookie", "ar_debug=1; DSID=ANfR7bMijFIVDbNI6B7yBHCIA2JOGDGo6uCSYtkcd8CQuY0l0nDd-vyQlqsxZ6tJCdPRYN_yeMN6A1IBiDGNE14PrlgL-wu6yXDPCAJBtyyg7_phniAIt0Ml8mf_bx2e3NlqDwjYnCuuEmsNgdDwPrg7B6ExzukoCXUh5-cNxPZCK--sefAASauzUh4nMKjJ7mE2rSTLLfCxXnTS0Trmue7AdiUXtj9PQwsWrfoeifYUMyF8VoPmrE-TQdfGLNEjkFlR_mGdoxD7UcexXWHeOi6-GsaF0bvVHmOKxjiHlOGtfYwVWzqMgmk; IDE=AHWqTUl9TiIuZozkARRyMcLwMEPoW2wZlsmvesp5-HjZ6Jm2uOTOQHT76AmXUpVBjwk");
+            conn.setRequestProperty("Cookie", "ar_debug=1; IDE=AHWqTUngFQbCXOgP-pPVOS-FrwKcQreCaqA1TcTvplJLFcbx1YMKhUQIuDhoITHwUc0; DSID=ANfR7bM9wZz_kSwWchw8JCNn_8sZ046czUsZ1jH_DWXWhLwV_gCZQAUlWQrBcxbLQth8-WvpMHku7JDNYrHZlcD8M53jZKFn147A3r6wzDv2BJBFisDJwt2IbBXBGU70UEdrCyJ4wj4hNQC1PV5dAp_c-DOcD9kFww_jKF9pRuhgEnQPU_UCXy8DmjqUg406CpDHBxLRbynjsj4C6spE9eIctQN5FPxtF_geq_d_IsDXGGVyMJO2O6aERvQ7T3s6ZHLh2g8r24pq0fs6Vfj2LCgO_WM8BX4tQJT5u1Az4ROJfvQ9nfNFajk");
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(conn.getInputStream()));
             String inputLine;

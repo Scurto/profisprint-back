@@ -2,41 +2,191 @@ package com.profisprint.service.impl;
 
 import com.profisprint.service.SeoFastService;
 import lombok.extern.slf4j.Slf4j;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.*;
+import java.util.stream.Collectors;
+
 @Slf4j
 @Service
 public class SeoFastServiceImpl implements SeoFastService {
 
-    @Autowired
-    private RestTemplate restTemplate;
-
     @Override
-    public void test() {
-        String url = "https://seo-fast.ru/work_tasks";
-        HttpHeaders headers = new HttpHeaders();
+    public void openCategory(WebDriver driver, String name) {
 
-//        many times by youtube
-//        headers.set("Cookie", "PHPSESSID=3l5v60sgt6p8fls323dia11qe5; _ym_d=1636399001; _ym_uid=1636399001736919284; hostname_sf=seo-fast.ru; _ym_visarc_4246883123=e1906acab58b34a90c17f1a4589ba89a; _buzz_fpc_=feaf02bebbfe7071c1c07e768565ebc2; _ym_visarc_4246983123=6068f2ea23164b07611c6b805e5e9dca; _ym_visarc_42461083123=1dcc84c87e103319e323255d3b3c2a6c; _vid_t=jsxgWSd3uIZZrIkWuMoCuBfqVRgVgbqrLdJXUjDMDGr5V0DV6zrJLN5SsTZ4/WzY1Gw39gVY3utdDmvumcU974pPTA==; _ym_visarc_42461183123=3c9c8837f83d596a4d2b922ea889d8d9; _ym_visarc_42461283123=7cec376c5d0e23521bc05042fa3833d5; _ga=GA1.2.883346684.1636718451; _gid=GA1.2.1614223963.1636718452; _ym_visarc_42461383123=147493c0bbbe1a645987598c64b98bf8; _ym_visarc_42461483123=0d5f7ed877efcf75c2f65a5417432fc5; _ym_visarc_42461583123=7a2ae8b2040f207d4bdef4d6cbd12e3e; _ym_visarc_42461683123=961f06b63cab4d02b44fe11db97f4dfe; _ym_visarc_42461783123=855bddc757279350f0ebb35b9011fc4f; _ym_visarc_42461883123=18f835bc376f73224c96e744c8e8bc54; _ym_visarc_42461983123=c7686af9bb003ea48390a91a1520b84c; _ym_visarc_42462083123=62ac5c9f2e435bf33136e27f3600d813; menu_g1=0; _ym_visarc_42462183123=65923c2b541a9167c025899a9e2502f2; _ym_visarc_42462283123=d66426b9fe5428f6083e20fc4a7fcfb6; _ym_visarc_42462383123=1161804a567dde02c91990b533dd5726; _ym_visarc_42462483123=0c60c479c5bbf781940a8033ebf4289a; window_popup3=1; _ym_visarc_42462583123=76c4606eee731bd0e76296bbd0ac1e0b; _ym_visarc_42462683123=4212071a7a3a58807355c95ca53809a1; window_popup_25=1; _ym_visarc_42462783123=92b794122ad9213b4353c1f339de4922; _ym_visarc_42462883123=c027cff4e53b0cb683d1d2d621c07eaf; taskfilter3=100; taskfilter4=100; id_us_t=; taskurl=; search_all_tt=; _ym_visarc_42462983123=22f596acedc5d2987286957054fb8ea1; fingerprint=f3a236d53eee648883f5f3864d28c8b2; id_task=; due_date=0; search_all_td=0; taskpricemax=0; taskpricemin=0; taskfilter1=98; taskfilter2=17; evercookie_cache=09255f52641471a340d1db7a29a3b006; evercookie_etag=09255f52641471a340d1db7a29a3b006; evercookie_png=09255f52641471a340d1db7a29a3b006; entrance=09255f52641471a340d1db7a29a3b006; window_popup_y=1; _ym_visarc_42463083123=302217cfd1ce4430a9bacfae59e75e15; _ym_isad=1; taskuser=; __gads=ID=65ee2bb6fefafe20-22137c0513cc0050:T=1636399001:RT=1638269094:S=ALNI_MY0_lvxkduJ8gqP_6bSHHTgYIfJZQ");
-//        favorites by youtube
-//        headers.set("Cookie", "PHPSESSID=3l5v60sgt6p8fls323dia11qe5; _ym_d=1636399001; _ym_uid=1636399001736919284; hostname_sf=seo-fast.ru; _ym_visarc_4246883123=e1906acab58b34a90c17f1a4589ba89a; _buzz_fpc_=feaf02bebbfe7071c1c07e768565ebc2; _ym_visarc_4246983123=6068f2ea23164b07611c6b805e5e9dca; _ym_visarc_42461083123=1dcc84c87e103319e323255d3b3c2a6c; _vid_t=jsxgWSd3uIZZrIkWuMoCuBfqVRgVgbqrLdJXUjDMDGr5V0DV6zrJLN5SsTZ4/WzY1Gw39gVY3utdDmvumcU974pPTA==; _ym_visarc_42461183123=3c9c8837f83d596a4d2b922ea889d8d9; _ym_visarc_42461283123=7cec376c5d0e23521bc05042fa3833d5; _ga=GA1.2.883346684.1636718451; _gid=GA1.2.1614223963.1636718452; _ym_visarc_42461383123=147493c0bbbe1a645987598c64b98bf8; _ym_visarc_42461483123=0d5f7ed877efcf75c2f65a5417432fc5; _ym_visarc_42461583123=7a2ae8b2040f207d4bdef4d6cbd12e3e; _ym_visarc_42461683123=961f06b63cab4d02b44fe11db97f4dfe; _ym_visarc_42461783123=855bddc757279350f0ebb35b9011fc4f; _ym_visarc_42461883123=18f835bc376f73224c96e744c8e8bc54; _ym_visarc_42461983123=c7686af9bb003ea48390a91a1520b84c; _ym_visarc_42462083123=62ac5c9f2e435bf33136e27f3600d813; menu_g1=0; _ym_visarc_42462183123=65923c2b541a9167c025899a9e2502f2; _ym_visarc_42462283123=d66426b9fe5428f6083e20fc4a7fcfb6; _ym_visarc_42462383123=1161804a567dde02c91990b533dd5726; _ym_visarc_42462483123=0c60c479c5bbf781940a8033ebf4289a; window_popup3=1; _ym_visarc_42462583123=76c4606eee731bd0e76296bbd0ac1e0b; _ym_visarc_42462683123=4212071a7a3a58807355c95ca53809a1; window_popup_25=1; _ym_visarc_42462783123=92b794122ad9213b4353c1f339de4922; _ym_visarc_42462883123=c027cff4e53b0cb683d1d2d621c07eaf; taskfilter3=100; taskurl=; id_us_t=; taskfilter4=100; search_all_tt=; _ym_visarc_42462983123=22f596acedc5d2987286957054fb8ea1; fingerprint=f3a236d53eee648883f5f3864d28c8b2; id_task=; due_date=0; taskpricemin=0; taskpricemax=0; search_all_td=0; taskfilter2=17; evercookie_cache=09255f52641471a340d1db7a29a3b006; evercookie_etag=09255f52641471a340d1db7a29a3b006; evercookie_png=09255f52641471a340d1db7a29a3b006; entrance=09255f52641471a340d1db7a29a3b006; window_popup_y=1; _ym_visarc_42463083123=302217cfd1ce4430a9bacfae59e75e15; _ym_isad=1; taskuser=; __gads=ID=65ee2bb6fefafe20-22137c0513cc0050:T=1636399001:RT=1638269094:S=ALNI_MY0_lvxkduJ8gqP_6bSHHTgYIfJZQ; taskfilter1=96");
-//        on check by youtube
-        headers.set("Cookie", "PHPSESSID=3l5v60sgt6p8fls323dia11qe5; _ym_d=1636399001; _ym_uid=1636399001736919284; hostname_sf=seo-fast.ru; _ym_visarc_4246883123=e1906acab58b34a90c17f1a4589ba89a; _buzz_fpc_=feaf02bebbfe7071c1c07e768565ebc2; _ym_visarc_4246983123=6068f2ea23164b07611c6b805e5e9dca; _ym_visarc_42461083123=1dcc84c87e103319e323255d3b3c2a6c; _vid_t=jsxgWSd3uIZZrIkWuMoCuBfqVRgVgbqrLdJXUjDMDGr5V0DV6zrJLN5SsTZ4/WzY1Gw39gVY3utdDmvumcU974pPTA==; _ym_visarc_42461183123=3c9c8837f83d596a4d2b922ea889d8d9; _ym_visarc_42461283123=7cec376c5d0e23521bc05042fa3833d5; _ga=GA1.2.883346684.1636718451; _gid=GA1.2.1614223963.1636718452; _ym_visarc_42461383123=147493c0bbbe1a645987598c64b98bf8; _ym_visarc_42461483123=0d5f7ed877efcf75c2f65a5417432fc5; _ym_visarc_42461583123=7a2ae8b2040f207d4bdef4d6cbd12e3e; _ym_visarc_42461683123=961f06b63cab4d02b44fe11db97f4dfe; _ym_visarc_42461783123=855bddc757279350f0ebb35b9011fc4f; _ym_visarc_42461883123=18f835bc376f73224c96e744c8e8bc54; _ym_visarc_42461983123=c7686af9bb003ea48390a91a1520b84c; _ym_visarc_42462083123=62ac5c9f2e435bf33136e27f3600d813; menu_g1=0; _ym_visarc_42462183123=65923c2b541a9167c025899a9e2502f2; _ym_visarc_42462283123=d66426b9fe5428f6083e20fc4a7fcfb6; _ym_visarc_42462383123=1161804a567dde02c91990b533dd5726; _ym_visarc_42462483123=0c60c479c5bbf781940a8033ebf4289a; window_popup3=1; _ym_visarc_42462583123=76c4606eee731bd0e76296bbd0ac1e0b; _ym_visarc_42462683123=4212071a7a3a58807355c95ca53809a1; window_popup_25=1; _ym_visarc_42462783123=92b794122ad9213b4353c1f339de4922; _ym_visarc_42462883123=c027cff4e53b0cb683d1d2d621c07eaf; taskfilter3=100; taskurl=; id_us_t=; taskfilter4=100; search_all_tt=; _ym_visarc_42462983123=22f596acedc5d2987286957054fb8ea1; fingerprint=f3a236d53eee648883f5f3864d28c8b2; id_task=; due_date=0; taskpricemin=0; taskpricemax=0; search_all_td=0; taskfilter2=17; evercookie_cache=09255f52641471a340d1db7a29a3b006; evercookie_etag=09255f52641471a340d1db7a29a3b006; evercookie_png=09255f52641471a340d1db7a29a3b006; entrance=09255f52641471a340d1db7a29a3b006; window_popup_y=1; _ym_visarc_42463083123=302217cfd1ce4430a9bacfae59e75e15; _ym_isad=1; taskuser=; __gads=ID=65ee2bb6fefafe20-22137c0513cc0050:T=1636399001:RT=1638269094:S=ALNI_MY0_lvxkduJ8gqP_6bSHHTgYIfJZQ; taskfilter1=1");
-
-
-        HttpEntity<Void> requestEntity = new HttpEntity<>(headers);
-        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, requestEntity, String.class);
-
-        System.out.println(response);
-
+        try {
+            WebElement menu = driver.findElement(By.id("menu_g1"));
+            List<WebElement> categories = menu.findElements(By.tagName("a"));
+            WebElement youtubeCategory = null;
+            for (WebElement category : categories) {
+                if (name.equalsIgnoreCase(category.getText())) {
+                    youtubeCategory = category;
+                }
+            }
+            Thread.sleep(2000);
+            youtubeCategory.click();
+            Thread.sleep(2000);
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
     }
 
-    private HttpHeaders getHttpHeaders() {
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        return headers;
+    @Override
+    public void openMenu(WebDriver driver, String name) {
+        try {
+            if (driver.findElements(By.id("capcha")).size() > 0) {
+                throw new RuntimeException("CAPTCHA ENABLED");
+            }
+            WebElement subscribeCategory = null;
+            List<WebElement> filterLineCategories = driver.findElements(By.className("m_stc"));
+            for (WebElement filterLineCategory : filterLineCategories) {
+                for (WebElement category : filterLineCategory.findElements(By.tagName("a"))) {
+                    if (name.equalsIgnoreCase(category.getText())) {
+                        subscribeCategory = category;
+                    }
+                }
+            }
+
+            Thread.sleep(2000);
+            subscribeCategory.click();
+            Thread.sleep(2000);
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Override
+    public WebElement openEmbeddedVideoPage(WebDriver driver) {
+        try {
+            List<WebElement> tableRows = driver.findElement(By.className("list_rek_table")).findElements(By.xpath("//tr[contains(@id,'youtube_v')]"));
+//            List<WebElement> tableRows = driver.findElements(By.xpath("//tr[contains(@id,'youtube_v')]"));
+            HashMap<String, Double> taskMap = new HashMap<>();
+            for (WebElement row : tableRows) {
+                String taskId = row.getAttribute("id").substring(row.getAttribute("id").indexOf("youtube_v")+9);
+                if (row.findElements(By.className("price_pay")).size() > 0) {
+                    WebElement pricePay = row.findElement(By.className("price_pay"));
+                    Double price = Double.valueOf(pricePay.getText().replace("руб.", "").trim());
+                    if (Double.compare(price, Double.parseDouble("0.19")) > 0) {
+                        taskMap.put(taskId, price);
+                    }
+                }
+            }
+            Map<String, Double> sortedMap = sortByValue(taskMap);
+            String id = sortedMap.keySet().stream().findFirst().get();
+            System.out.println("START");
+            WebElement task = driver.findElement(By.id("start_youtube"+id)).findElement(By.className("surf_ckick"));
+            task.click();
+            Thread.sleep(3000);
+            WebElement startTask = driver.findElement(By.id("start_youtube"+id)).findElement(By.className("status_link_youtube"));
+            startTask.click();
+            Thread.sleep(3000);
+            return driver.findElement(By.id("moder_y"+id)).findElement(By.tagName("a"));
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Override
+    public void startEmbeddedVideo(WebDriver driver) {
+        try {
+            WebElement timerElement = driver.findElement(By.id("timer_see"));
+            Integer time = (Integer.parseInt(timerElement.getText()) + 10) * 1000;
+            System.out.println("time to wait -> " + time);
+
+            WebElement menu = driver.findElement(By.id("video-start"));
+            menu.click();
+            Thread.sleep(time);
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Override
+    public String openYoutubePageAndSubscribe(WebDriver driver, String seofastWindow, WebElement channelElement) {
+        try {
+            String youtubeBaseWindow = "";
+            String youtubeWindow = "";
+            WebElement youtubeBtnStart = driver.findElement(By.id("button_y"));
+            youtubeBtnStart.click();
+            Thread.sleep(3000);
+
+            for (String windowHandle : driver.getWindowHandles()) {
+                if (!seofastWindow.equalsIgnoreCase(windowHandle)) {
+                    youtubeBaseWindow = windowHandle;
+                    System.out.println("youtubeBaseWindow -> " + youtubeBaseWindow);
+                }
+            }
+            driver.switchTo().window(youtubeBaseWindow);
+            driver.close();
+            driver.switchTo().window(seofastWindow);
+            channelElement.click();
+            Thread.sleep(3000);
+            for (String windowHandle : driver.getWindowHandles()) {
+                if (!seofastWindow.equalsIgnoreCase(windowHandle)) {
+                    youtubeWindow = windowHandle;
+                    System.out.println("youtubeWindow -> " + youtubeWindow);
+                }
+            }
+            driver.switchTo().window(youtubeWindow);
+            WebElement chanelTitleElement = driver.findElement(By.id("text"));
+            String chanelTitle = chanelTitleElement.getText();
+            System.out.println(chanelTitle);
+            WebElement youtubeSubscribeBtn = driver.findElement(By.id("subscribe-button-shape"));
+            youtubeSubscribeBtn.click();
+            Thread.sleep(2000);
+            driver.close();
+
+            driver.switchTo().window(seofastWindow);
+            Thread.sleep(6000);
+            return chanelTitle;
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Override
+    public void selectAnswerAndConfirmTask(WebDriver driver, String chanelTitle) {
+        try {
+            Thread.sleep(6000);
+            WebElement selectElement = driver.findElement(By.id("author_channel"));
+            Select select = new Select(selectElement);
+            select.selectByValue(chanelTitle);
+
+            Thread.sleep(2000);
+
+            WebElement confirmTask = driver.findElement(By.id("select_y")).findElement(By.tagName("div"));
+            System.out.println("confirmTask=> " + confirmTask.getText());
+            confirmTask.click();
+//
+//            Thread.sleep(2000);
+//            driver.close();
+        } catch (Exception ex) {
+            System.out.println(ex);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    public static HashMap<String, Double> sortByValue(HashMap<String, Double> hm) {
+        List<Map.Entry<String, Double> > list = new LinkedList<Map.Entry<String, Double> >(hm.entrySet());
+        Collections.sort(list, (o1, o2) -> (o2.getValue()).compareTo(o1.getValue()));
+
+        // put data from sorted list to hashmap
+        HashMap<String, Double> temp = new LinkedHashMap<>();
+        for (Map.Entry<String, Double> aa : list) {
+            temp.put(aa.getKey(), aa.getValue());
+        }
+        return temp;
     }
 }

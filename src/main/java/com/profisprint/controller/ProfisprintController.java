@@ -100,7 +100,7 @@ public class ProfisprintController {
     @RequestMapping(value = "/profitcentr", method = RequestMethod.GET)
     public String profitcentr() {
 //        http://localhost:8830/profitcentr
-        profitcentrService.test();
+//        profitcentrService.test();
         return "";
     }
 
